@@ -1,6 +1,6 @@
 ﻿namespace WebApp.Data.Entities;
 
-public class Article
+public class Article : IBaseEntity
 {
     public Guid Id { get; set; }
 

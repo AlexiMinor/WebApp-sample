@@ -10,6 +10,7 @@
 
 <div class="container text-center">
     <form asp-controller="Article" asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        <input type="hidden" asp-for="Id"/>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="articleTitle" class="form-label">Title</label>
@@ -18,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-4 col-lg-3">
-                <input type="submit" class="btn btn-primary" value="Create" />
+                <input type="submit" class="btn btn-primary" value="Create"/>
             </div>
         </div>
     </form>

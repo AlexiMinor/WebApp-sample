@@ -1,9 +1,13 @@
-﻿namespace WebApp.Repositories;
+﻿using WebApp.Data.Entities;
+
+namespace WebApp.Repositories;
 
 public interface IUnitOfWork
 {
-    IArticleRepository ArticleRepository { get; }
-    IArticleSourceRepository ArticleSourceRepository { get; }
+    IRepository<Article> ArticleRepository { get; }
+    IRepository<ArticleSource> ArticleSourceRepository { get; }
+    IRepository<Comment> CommentRepository { get; }
+    IRepository<User> UserRepository { get; }
 
     Task<int> Commit();
 }

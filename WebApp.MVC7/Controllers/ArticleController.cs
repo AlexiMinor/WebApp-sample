@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebApp.Core;
+using WebApp.Data.Entities;
 using WebApp.MVC7.Models;
 using WebApp.Repositories;
 
@@ -15,19 +18,22 @@ namespace WebApp.MVC7.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var articlesList = _unitOfWork.ArticleRepository.GetArticlesWithSource()
+
+            var articlesList = await _unitOfWork.ArticleRepository
+                .FindBy(article => !string.IsNullOrEmpty(article.Title),
+                    article => article.ArticleSource)
                 .Select(article => new ArticleModel()
-                    {
-                        Id = article.Id,
-                        Date = article.Date,
-                        Rate = article.Rate,
-                        Title = article.Title,
-                        Source = article.ArticleSource.Name,
-                        Description = article.Description
-                    })
-                .ToList();
+                {
+                    Id = article.Id,
+                    Date = article.Date,
+                    Rate = article.Rate,
+                    Title = article.Title,
+                    Source = article.ArticleSource.Name,
+                    Description = article.Description,
+                })
+                .ToListAsync();
             return View(articlesList);
         }
 
@@ -52,7 +58,7 @@ namespace WebApp.MVC7.Controllers
         {
             if (id.HasValue)
             {
-                var article = await _unitOfWork.ArticleRepository.GetById(id.Value);
+                var article = await _unitOfWork.ArticleRepository.GetById(id.Value, art => art.ArticleSource);
                 if (article != null)
                 {
                     var articleModel = new ArticleModel()
@@ -70,29 +76,39 @@ namespace WebApp.MVC7.Controllers
             return BadRequest();
         }
 
-        //[HttpGet]
-        //public IActionResult Edit(int? id)
-        //{
-        //    if (id.HasValue && _articles.ContainsKey(id.Value))
-        //    {
-        //        var article = _articles[id.Value];
-        //        return View(article);
-        //    }
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var article = await _unitOfWork.ArticleRepository.GetByIdAsNoTracking(id);
+            if (article != null)
+            {
+                var articleModel = new ArticleModel()
+                {
+                    Id = article.Id,
+                    Title = article.Title,
+                };
+                return View(articleModel);
+            }
 
-        //    return BadRequest();
-        //}
+            return BadRequest();
+        }
 
-        //[HttpPost]
-        //public IActionResult Edit([FromRoute] int? id, [FromForm] ArticleModel articleModel)
-        //{
-        //    if (id.HasValue && _articles.ContainsKey(id.Value))
-        //    {
-        //        _articles[id.Value].Title = articleModel.Title;
-        //        return RedirectToAction("Details", new {id = id.Value});
-        //    }
+        [HttpPost]
+        public async Task<IActionResult> Edit([FromForm] ArticleModel articleModel)
+        {
+            if (await _unitOfWork.ArticleRepository.GetByIdAsNoTracking(articleModel.Id) != null)
+            {
+                await _unitOfWork.ArticleRepository.Patch(articleModel.Id, new List<PatchDto>()
+                {
+                    //should be sure that name of property/field in model same with property name of entity
+                    new() { PropertyName = nameof(articleModel.Title), PropertyValue = articleModel.Title }
+                });
+                await _unitOfWork.Commit();
+                return RedirectToAction("Details", new { id = articleModel.Id });
+            }
 
-        //    return View();
-        //}
+            return View();
+        }
 
         //[ActionName("Welcome")]
         [HttpPost]

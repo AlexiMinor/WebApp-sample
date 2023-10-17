@@ -4,47 +4,21 @@ using WebApp.Data.Entities;
 
 namespace WebApp.Repositories
 {
-    public class ArticleRepository : IArticleRepository
+    public class ArticleRepository : Repository<Article>, IArticleRepository
     {
-        //Aggregate all logic for work with articles in DB in 1 place
-        private readonly ArticlesAggregatorDbContext _dbContext;
-        //private readonly ITestService _testService;
-        //private int info = 10;
-        public ArticleRepository(ArticlesAggregatorDbContext dbContext)
+        public ArticleRepository(ArticlesAggregatorDbContext dbContext) 
+            : base(dbContext)
         {
-            _dbContext = dbContext;
-            //_testService = testService;
         }
 
-        public async Task<List<Article?>> GetArticles()
-        {
-            //info++;
-            return await _dbContext.Articles.ToListAsync();
-        }
+        //public override async Task<List<Article>> FindBy()
+        //{
+        //    return await _dbSet.Where(article => !string.IsNullOrEmpty(article.Title)).ToListAsync();
+        //}
 
-        public IQueryable<Article?> GetArticlesWithSource()
+        public async Task<List<Article>> GetArticlesSortedByTime()
         {
-            //_testService.Do();
-            //info++;
-            return _dbContext.Articles.Include(article => article.ArticleSource);
-        }
-
-        public async Task InsertArticles(IEnumerable<Article?> articles)
-        {
-            //info++;
-            await _dbContext.Articles.AddRangeAsync(articles);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task<Article?> GetById(Guid id)
-        {
-            //info++;
-            return await _dbContext.Articles.FirstOrDefaultAsync(article => article.Id.Equals(id));
-        }
-
-        public async Task<int> Commit()
-        {
-            return await _dbContext.SaveChangesAsync();
+            throw new NotImplementedException();
         }
     }
 }

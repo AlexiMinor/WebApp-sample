@@ -1,6 +1,6 @@
 ﻿namespace WebApp.Data.Entities
 {
-    public class ArticleSource
+    public class ArticleSource : IBaseEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

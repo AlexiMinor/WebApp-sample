@@ -2,11 +2,8 @@
 
 namespace WebApp.Repositories;
 
-public interface IArticleRepository
+public interface IArticleRepository : IRepository<Article>
 {
-    Task<List<Article?>> GetArticles();
-     IQueryable<Article?> GetArticlesWithSource();
-    Task InsertArticles(IEnumerable<Article?> articles);
-    Task<Article?> GetById(Guid id);
-    Task<int> Commit();
+    Task<List<Article>> GetArticlesSortedByTime();
+    //other custom logic methods
 }
