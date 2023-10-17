@@ -1,0 +1,25 @@
+﻿@model ArticleModel
+@{
+    ViewData["Title"] = $"Edit Article {Model.Id}";
+}
+
+<div class="text-center">
+    <h2>Edit Article @Model.Id</h2>
+</div>
+
+
+<div class="container text-center">
+    <form asp-controller="Article" asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label for="articleTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="Title" id="articleTitle">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+                <input type="submit" class="btn btn-primary" value="Create" />
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+﻿@model List<ArticleModel>
+@{
+    ViewData["Title"] = "Articles";
+}
+
+<div class="text-center">
+    <h2>Articles</h2>
+</div>
+
+
+<div class="container text-center">
+    @* <div class="row">
+        <a asp-controller="Article" asp-action="Create" class="btn btn-primary">Create Article</a>
+    </div> *@
+    <div class="row align-items-start">
+        @foreach (var item in Model)
+        {
+            await Html.RenderPartialAsync("ArticlePreview", item);
+        }
+    </div>
+</div>

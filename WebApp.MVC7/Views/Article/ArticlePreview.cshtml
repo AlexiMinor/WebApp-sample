@@ -1,0 +1,18 @@
+﻿@model ArticleModel
+@{
+    Layout = null;
+}
+
+<div class="col-12 col-sm-12 col-lg-6">
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    @if (@Model.Rate.HasValue)
+    {
+        <span>@Model.Rate</span>
+    }
+    <span>@Model.Date</span>
+    <span><i>@Model.Source</i></span>
+   @*  <span>
+        <a asp-controller="Article" asp-action="Details" asp-route-id="@Model.Id" class="link-primary">Detail</a>
+    </span> *@
+</div>
