@@ -20,7 +20,6 @@ namespace WebApp.MVC7.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-
             var articlesList = await _unitOfWork.ArticleRepository
                 .FindBy(article => !string.IsNullOrEmpty(article.Title),
                     article => article.ArticleSource)
@@ -43,15 +42,14 @@ namespace WebApp.MVC7.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> Create(ArticleModel articleModel)
-        //{
-        //    _unitOfWork.ArticleRepository.MakeChanges();
-        //    _unitOfWork.ArticleSourceRepository.MakeChanges();
-        //    await _unitOfWork.Commit();
-        //    return Ok();
+        [HttpPost]
+        public async Task<IActionResult> Create(ArticleModel articleModel)
+        {
+            
+            await _unitOfWork.Commit();
+            return Ok();
 
-        //}
+        }
 
         [HttpGet]
         public async Task<IActionResult> Details(Guid? id)
@@ -111,10 +109,26 @@ namespace WebApp.MVC7.Controllers
         }
 
         //[ActionName("Welcome")]
-        [HttpPost]
-        public IActionResult Favorite()
+        [HttpGet]
+        public async Task<IActionResult> Favorite()
         {
-            return Ok("Hello World");
+            var articlesList = await _unitOfWork.ArticleRepository
+                .FindBy(article => !string.IsNullOrEmpty(article.Title),
+                    article => article.ArticleSource)
+                .OrderBy(article => article.Date)
+               
+                .Select(article => new ArticleModel()
+                {
+                    Id = article.Id,
+                    Date = article.Date,
+                    Rate = article.Rate,
+                    Title = article.Title,
+                    Source = article.ArticleSource.Name,
+                    Description = article.Description,
+                })
+                .FirstOrDefaultAsync();
+
+            return View(articlesList);
         }
 
         //[NonAction]

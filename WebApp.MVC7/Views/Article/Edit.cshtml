@@ -14,6 +14,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="articleTitle" class="form-label">Title</label>
+                @Html.TextBoxFor(model => model.Title, null, new {@class="form-control", id="articleTitle"})
                 <input type="text" class="form-control" asp-for="Title" id="articleTitle">
             </div>
         </div>

@@ -1,4 +1,5 @@
-﻿@{
+﻿@using WebApp.MVC7.HtmlHelpers
+@{
     ViewData["Title"] = "Home Page";
     // ViewBag.Message = "Hello";
     Layout = "_Layout";
@@ -10,36 +11,31 @@
     <p>@ViewBag.Hello</p>
 </div>
 
+<date-time id="111">
+    <watch></watch>
+    <date></date>
+    <date></date>
+    <date></date>
+    <date></date>
+</date-time>
+
+
 <h2>@ViewBag.Message</h2>
 
 <div class="text-center">
-    @for (int i = 0; i < 20; i++)
-    {
-        if (i % 2 == 0)
-        {
-            <p>Number - @i</p>
-        }
-        else
-        {
-            <p>
-                <b>
-                    Num - @i
-                </b>
-            </p>
-        }
-    }
-    
+    @Html.CreateList(new []{"123","321","132"})
+
     <p>@ViewData["Bye"]</p>
 </div>
 
 @section Scripts
-{
+    {
     <script>
         console.log('123');
-    </script>   
+    </script>
 }
 
 @section CSS
-{
-    
+    {
+
 }

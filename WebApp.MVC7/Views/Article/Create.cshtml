@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ArticleModel
+@{
     ViewData["Title"] = "Articles";
 }
 
@@ -9,17 +10,17 @@
 
 
 <div class="container text-center">
-    <form action="~/article/create" method="post">
+    <form asp-controller="Article" asp-action="Create" method="post">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <label for="inputId" class="form-label">Id</label>
-                <input type="number" class="form-control" name="id" id="inputId">
+                <label asp-for="Id" class="form-label">Id</label>
+                <input type="number" asp-for="Id" class="form-control">
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <label for="articleTitle" class="form-label">Title</label>
-                <input type="text" class="form-control" name="Title" id="articleTitle">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="Title">
             </div>
         </div>
         <div class="row">
