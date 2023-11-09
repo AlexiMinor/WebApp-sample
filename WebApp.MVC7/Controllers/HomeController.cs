@@ -18,6 +18,8 @@ namespace WebApp.MVC7.Controllers
 
         public async Task<IActionResult> Index()
         {
+            _logger.LogInformation("Hello from HomeController. Serilog works well");
+
             //ViewBag.Hello = "Hello world";
             //ViewData["Bye"] = "Bye world";
             ////return Ok("blablabla1")

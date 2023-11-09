@@ -1,0 +1,15 @@
+﻿@model ArticleSourceAggregationModel
+
+<div class="container text-center">
+    <div class="row">
+        <div class="card col-12 col-sm-12 col-lg-6">
+            <form class="card-body" asp-controller="Article" asp-action="Aggregate" method="post">
+                <input type="hidden" asp-for="Id"/>
+                <h5 class="card-title">Are you sure that you want to get articles from @Model.Name</h5>
+                <p class="card-text">This operation take some time and can affect application usage</p>
+                <button class="btn btn-primary">Confirm</button>
+                <a asp-controller="ArticleSource" asp-action="List" class="btn btn-primary">Cancel</A>
+            </form>
+        </div>
+    </div>
+</div>

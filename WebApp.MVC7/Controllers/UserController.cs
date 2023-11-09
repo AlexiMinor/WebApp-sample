@@ -1,9 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
+using WebApp.Data.Entities;
+using WebApp.MVC7.Models;
 
 namespace WebApp.MVC7.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IValidator<UserRegisterModel> _registerValidator;
         private readonly List<string> _users = new List<string>()
         {
             "Vasya",
@@ -14,7 +19,29 @@ namespace WebApp.MVC7.Controllers
             "Joseph"
         };
 
+        public UserController(IValidator<UserRegisterModel> registerValidator)
+        {
+            _registerValidator = registerValidator;
+        }
 
+        [HttpGet]
+        public IActionResult Register()
+        {
+            var model = new UserRegisterModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(UserRegisterModel model)
+        {
+            var result = await _registerValidator.ValidateAsync(model);
+            if (result.IsValid)
+            {
+                return Ok(model);
+            }
+            result.AddToModelState(ModelState);
+            return View(model);
+        }
 
         //domain/controller/action ? search = J & age = 39
         public IActionResult Search(string? search, int? age)
@@ -32,9 +59,14 @@ namespace WebApp.MVC7.Controllers
             return Ok(searchedUsers);
         }
 
-        public IActionResult Cities([FromQuery]string[]? cities)
+        [HttpGet]
+        public IActionResult CheckEmail(string email)
         {
-            return Ok(cities);
+            if (email.StartsWith("a", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return Json(false);
+            }
+            return Json(true);
         }
     }
 }

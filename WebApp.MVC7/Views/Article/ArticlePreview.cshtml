@@ -5,7 +5,8 @@
 
 <div class="col-12 col-sm-12 col-lg-6">
     <h4>@Model.Title</h4>
-    <p>@Model.Description</p>
+    <div>@Html.Raw(Model.Description)</div>
+    
     @if (@Model.Rate.HasValue)
     {
         <span>@Model.Rate</span>

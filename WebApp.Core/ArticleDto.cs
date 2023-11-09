@@ -1,6 +1,6 @@
-﻿namespace WebApp.Data.Entities;
+﻿namespace WebApp.Core;
 
-public class Article : IBaseEntity
+public class ArticleDto
 {
     public Guid Id { get; set; }
 
@@ -12,9 +12,5 @@ public class Article : IBaseEntity
     public DateTime Date { get; set; }
     public float? Rate { get; set; }
     public string SourceUrl { get; set; }
-
     public Guid ArticleSourceId { get; set; }
-    public ArticleSource ArticleSource { get; set; }
-
-    public List<Comment> Comments { get; set; }
 }

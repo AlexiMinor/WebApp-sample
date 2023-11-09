@@ -11,5 +11,6 @@ public class ArticleModel
     public string Source { get; set; }
     public float? Rate { get; set; }
     public DateTime Date { get; set; }
-
+    public string SourceUrl { get; set; }
+    public string Text{ get; set; }
 }

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Core;
 using WebApp.Data.Entities;
 using WebApp.MVC7.Models;
 using WebApp.Repositories;
+using WebApp.Services.Interfaces;
 
 namespace WebApp.MVC7.Controllers
 {
@@ -11,45 +13,97 @@ namespace WebApp.MVC7.Controllers
     public class ArticleController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-
-        public ArticleController(IUnitOfWork unitOfWork)
+        private readonly IArticleService _articleService;
+        private readonly ILogger<ArticleController> _logger;
+        public ArticleController(IUnitOfWork unitOfWork, 
+            ILogger<ArticleController> logger, 
+            IArticleService articleService)
         {
             _unitOfWork = unitOfWork;
+            _logger = logger;
+            _articleService = articleService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var articlesList = await _unitOfWork.ArticleRepository
-                .FindBy(article => !string.IsNullOrEmpty(article.Title),
-                    article => article.ArticleSource)
-                .Select(article => new ArticleModel()
-                {
-                    Id = article.Id,
-                    Date = article.Date,
-                    Rate = article.Rate,
-                    Title = article.Title,
-                    Source = article.ArticleSource.Name,
-                    Description = article.Description,
-                })
-                .ToListAsync();
-            return View(articlesList);
+            try
+            {
+                _logger.LogInformation("Selecting all articles started");
+                var articlesList = await _unitOfWork.ArticleRepository
+                    .FindBy(article => !string.IsNullOrEmpty(article.Title),
+                        article => article.ArticleSource)
+                    .Select(article => new ArticleModel()
+                    {
+                        Id = article.Id,
+                        Date = article.Date,
+                        Rate = article.Rate,
+                        Title = article.Title,
+                        Source = article.ArticleSource.Name,
+                        Description = article.Description,
+                    })
+                    .ToListAsync();
+                _logger.LogInformation("Selecting all articles finished");
+
+                return View(articlesList);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);//should be replaced for friendly page
+            }
+           
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var model = new CreateArticleModel()
+            {
+                AvailableSources = await _unitOfWork.ArticleSourceRepository
+                    .GetAsQueryable()
+                    .AsNoTracking()
+                    .Select(source 
+                        => new SelectListItem(source.Name, source.Id.ToString("D")))
+                    .ToListAsync()
+            };
+            return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ArticleModel articleModel)
-        {
-            
-            await _unitOfWork.Commit();
-            return Ok();
+        public async Task<IActionResult> Create(CreateArticleModel articleModel)
+         {
+             if (ModelState.IsValid)
+             {
+                 var articleForCreate = new Article()
+                 {
+                     Id = Guid.NewGuid(),
+                     Title = articleModel.Title,
+                     ArticleSourceId = articleModel.SourceId,
+                     Date = DateTime.Now,
+                     Description = articleModel.Description,
+                     Text = articleModel.Description
+                 };
+                 
+                 await _unitOfWork.ArticleRepository.InsertOne(articleForCreate);
+                 await _unitOfWork.Commit();
 
-        }
+                 return RedirectToAction("Index");
+             }
+             else
+             {
+                 var availableSources = await _unitOfWork.ArticleSourceRepository
+                     .GetAsQueryable()
+                     .AsNoTracking()
+                     .Select(source
+                         => new SelectListItem(source.Name, source.Id.ToString("D")))
+                     .ToListAsync();
+
+                 articleModel.AvailableSources = availableSources;
+               
+                 return View(articleModel);
+             }
+         }
 
         [HttpGet]
         public async Task<IActionResult> Details(Guid? id)
@@ -67,6 +121,7 @@ namespace WebApp.MVC7.Controllers
                         Title = article.Title,
                         Source = article.ArticleSource.Name,
                         Description = article.Description,
+                        Text = article.Text
                     };
                     return View(articleModel);
                 }
@@ -131,6 +186,42 @@ namespace WebApp.MVC7.Controllers
             return View(articlesList);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetArticles(Guid articleSourceId)
+        {
+            var articleSource = await _unitOfWork.ArticleSourceRepository.GetById(articleSourceId);
+            var model = new ArticleSourceAggregationModel()
+            {
+                Id = articleSourceId,
+                Name = articleSource.Name
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Aggregate(ArticleSourceAggregationModel model)
+        {
+            var data = await _articleService.AggregateDataFromRssByArticleSourceId(model.Id);
+
+            var existedArticles = await _articleService.GetExistedArticlesUrls();
+
+            var uniqueArticles = data
+                .Where(dto => !existedArticles
+                    .Any(url => dto.SourceUrl.Equals(url))).ToArray();
+            var listFulfilledArticles = new List<ArticleDto>();
+
+            foreach (var articleDto in uniqueArticles)
+            {
+                var fulFilledArticle = await _articleService.GetArticleByUrl(articleDto.SourceUrl, articleDto);
+                if (fulFilledArticle != null)
+                {
+                    listFulfilledArticles.Add(fulFilledArticle);
+                }
+            }
+
+            await _articleService.InsertParsedArticles(listFulfilledArticles);
+            return RedirectToAction("Index");
+        }
         //[NonAction]
         private IActionResult Do()
         {

@@ -8,6 +8,6 @@ public interface IUnitOfWork
     IRepository<ArticleSource> ArticleSourceRepository { get; }
     IRepository<Comment> CommentRepository { get; }
     IRepository<User> UserRepository { get; }
-
+    string GetDataFromConfig();
     Task<int> Commit();
 }
