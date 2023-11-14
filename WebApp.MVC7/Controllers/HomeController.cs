@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebApp.MVC7.Filters;
 using WebApp.MVC7.Models;
 using WebApp.MVC7.Services;
 
@@ -16,7 +17,9 @@ namespace WebApp.MVC7.Controllers
             //_dbInitializer = dbInitializer;
         }
 
-        public async Task<IActionResult> Index()
+        //[TestResourceFilter(50, "Hello world")]
+        [TestActionFilter]
+        public async Task<IActionResult> Index(int? data)
         {
             _logger.LogInformation("Hello from HomeController. Serilog works well");
 

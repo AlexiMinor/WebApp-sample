@@ -1,0 +1,354 @@
+2023-11-14 17:52:58.041 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 17:52:58.504 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 17:52:58.505 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 17:52:58.508 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 17:52:58.509 +01:00 [INF] Hosting environment: Development
+2023-11-14 17:52:58.510 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 17:53:01.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 17:53:01.403 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:53:01.421 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 17:53:01.559 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:53:01.569 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 17:53:01.580 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5.1145ms.
+2023-11-14 17:53:01.596 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:53:01.931 +01:00 [INF] Executed ViewResult - view Index executed in 339.5855ms.
+2023-11-14 17:53:01.940 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 516.6779ms
+2023-11-14 17:53:01.943 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:53:01.985 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 744.8469ms
+2023-11-14 17:53:01.989 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/WebApp.MVC7.styles.css?v=dRgpUhy3x77onpsSslnGBYrKn07NE0WLBWtOy0Vsyak - -
+2023-11-14 17:53:01.989 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - -
+2023-11-14 17:53:01.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:53:01.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:53:02.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 29.2786ms
+2023-11-14 17:53:02.021 +01:00 [INF] The file /css/site.css was not modified
+2023-11-14 17:53:02.021 +01:00 [INF] The file /WebApp.MVC7.styles.css was not modified
+2023-11-14 17:53:02.024 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - - - 304 - text/css 34.2797ms
+2023-11-14 17:53:02.025 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/WebApp.MVC7.styles.css?v=dRgpUhy3x77onpsSslnGBYrKn07NE0WLBWtOy0Vsyak - - - 304 - text/css 35.3215ms
+2023-11-14 17:53:02.047 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.8842ms
+2023-11-14 17:53:02.118 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:53:02.154 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:53:02.156 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 38.6800ms
+2023-11-14 17:53:08.065 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 17:53:08.068 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:53:08.073 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 17:53:43.525 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 17:53:43.825 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 17:53:43.828 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 17:53:43.833 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 17:53:43.835 +01:00 [INF] Hosting environment: Development
+2023-11-14 17:53:43.837 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 17:53:45.416 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 17:53:45.547 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:53:45.565 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 17:53:45.629 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:53:45.636 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 17:53:45.643 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.1041ms.
+2023-11-14 17:53:45.655 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:53:45.841 +01:00 [INF] Executed ViewResult - view Index executed in 187.9732ms.
+2023-11-14 17:53:45.846 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 279.1444ms
+2023-11-14 17:53:45.848 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:53:45.876 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 464.7014ms
+2023-11-14 17:53:45.877 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:53:45.877 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:53:45.895 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 18.5585ms
+2023-11-14 17:53:45.902 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.4485ms
+2023-11-14 17:53:45.988 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:53:46.008 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:53:46.010 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 21.5715ms
+2023-11-14 17:53:52.999 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 17:53:53.004 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:53:53.009 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 17:53:54.426 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:53:59.413 +01:00 [INF] Selecting all articles started
+2023-11-14 17:54:00.800 +01:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-14 17:54:00.873 +01:00 [INF] Selecting all articles finished
+2023-11-14 17:54:00.876 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6447.3408ms.
+2023-11-14 17:54:00.881 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:54:00.941 +01:00 [INF] Executed ViewResult - view Index executed in 61.6147ms.
+2023-11-14 17:54:00.943 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 7931.6629ms
+2023-11-14 17:54:00.945 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:54:00.970 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 7971.3109ms
+2023-11-14 17:54:00.983 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:54:00.985 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.2959ms
+2023-11-14 17:54:00.990 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:54:01.002 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.8035ms
+2023-11-14 17:54:01.063 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:54:01.070 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:54:01.072 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 9.2056ms
+2023-11-14 17:54:03.821 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 17:54:03.824 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:54:03.826 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 17:54:03.896 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:54:18.771 +01:00 [INF] Selecting all articles started
+2023-11-14 17:54:18.785 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-14 17:54:18.790 +01:00 [INF] Selecting all articles finished
+2023-11-14 17:54:18.791 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 14893.2265ms.
+2023-11-14 17:54:18.793 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:54:18.806 +01:00 [INF] Executed ViewResult - view Index executed in 12.6653ms.
+2023-11-14 17:54:18.808 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 14980.7603ms
+2023-11-14 17:54:18.810 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:54:18.821 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 15000.1224ms
+2023-11-14 17:54:18.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:54:18.827 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:54:18.828 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.7633ms
+2023-11-14 17:54:18.851 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.4722ms
+2023-11-14 17:54:18.861 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:54:18.879 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:54:18.881 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 19.7271ms
+2023-11-14 17:54:31.547 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:54:31.550 +01:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map was not modified
+2023-11-14 17:54:31.552 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 304 - text/plain 5.0400ms
+2023-11-14 17:54:31.661 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/css/bootstrap.min.css.map - -
+2023-11-14 17:54:31.662 +01:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css.map was not modified
+2023-11-14 17:54:31.663 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/css/bootstrap.min.css.map - - - 304 - text/plain 2.6728ms
+2023-11-14 17:59:48.232 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 17:59:48.460 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 17:59:48.462 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 17:59:48.465 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 17:59:48.468 +01:00 [INF] Hosting environment: Development
+2023-11-14 17:59:48.469 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 17:59:50.211 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 17:59:50.308 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:59:50.327 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 17:59:50.403 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:59:50.410 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 17:59:50.416 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.6425ms.
+2023-11-14 17:59:50.426 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:59:50.615 +01:00 [INF] Executed ViewResult - view Index executed in 190.7474ms.
+2023-11-14 17:59:50.620 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 290.3709ms
+2023-11-14 17:59:50.622 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 17:59:50.638 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 430.1780ms
+2023-11-14 17:59:50.645 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:59:50.645 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:59:50.675 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 29.6163ms
+2023-11-14 17:59:50.679 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.3324ms
+2023-11-14 17:59:50.741 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:59:50.762 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:59:50.764 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 23.3462ms
+2023-11-14 17:59:52.803 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 17:59:52.809 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:59:52.813 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 17:59:56.509 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 17:59:56.522 +01:00 [INF] Selecting all articles started
+2023-11-14 17:59:57.298 +01:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-14 17:59:57.351 +01:00 [INF] Selecting all articles finished
+2023-11-14 17:59:57.355 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 843.1391ms.
+2023-11-14 17:59:57.365 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 17:59:57.426 +01:00 [INF] Executed ViewResult - view Index executed in 62.2634ms.
+2023-11-14 17:59:57.430 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 4613.7482ms
+2023-11-14 17:59:57.433 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 17:59:57.458 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 4655.2089ms
+2023-11-14 17:59:57.543 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 17:59:57.548 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 17:59:57.549 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.7516ms
+2023-11-14 17:59:57.589 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 17:59:57.589 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 17:59:57.591 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.0487ms
+2023-11-14 17:59:57.633 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.1516ms
+2023-11-14 18:01:07.706 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 18:01:07.732 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:01:07.735 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 18:01:13.125 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 18:01:13.127 +01:00 [INF] Selecting all articles started
+2023-11-14 18:01:13.139 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-14 18:01:13.146 +01:00 [INF] Selecting all articles finished
+2023-11-14 18:01:13.147 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 20.6033ms.
+2023-11-14 18:01:13.150 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 18:01:13.158 +01:00 [INF] Executed ViewResult - view Index executed in 8.4391ms.
+2023-11-14 18:01:14.409 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 6670.7932ms
+2023-11-14 18:01:14.412 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:01:14.454 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 6747.3645ms
+2023-11-14 18:01:14.495 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 18:01:14.499 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 18:01:14.500 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.2123ms
+2023-11-14 18:01:14.544 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 18:01:14.544 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 18:01:14.547 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.6292ms
+2023-11-14 18:01:14.555 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.8644ms
+2023-11-14 18:02:00.937 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 18:02:01.149 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 18:02:01.165 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 18:02:01.168 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 18:02:01.170 +01:00 [INF] Hosting environment: Development
+2023-11-14 18:02:01.171 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 18:02:02.765 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 18:02:02.893 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 18:02:02.912 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 18:02:02.975 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 18:02:02.981 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 18:02:02.986 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.6373ms.
+2023-11-14 18:02:03.000 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-14 18:02:03.177 +01:00 [INF] Executed ViewResult - view Index executed in 182.9041ms.
+2023-11-14 18:02:03.183 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 268.8075ms
+2023-11-14 18:02:03.185 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 18:02:03.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 458.6007ms
+2023-11-14 18:02:03.229 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 18:02:03.229 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 18:02:03.241 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 12.2251ms
+2023-11-14 18:02:03.249 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.3466ms
+2023-11-14 18:02:03.325 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-14 18:02:03.347 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-14 18:02:03.350 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 24.2368ms
+2023-11-14 18:02:07.370 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 18:02:07.375 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:02:07.381 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 18:02:08.945 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-14 18:02:08.947 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 1562.8402ms
+2023-11-14 18:02:08.949 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:02:08.951 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 5 text/plain;+charset=utf-8 1581.2281ms
+2023-11-14 18:02:12.286 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-14 18:02:12.289 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:02:12.290 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-14 18:02:15.011 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-14 18:02:15.014 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 2721.2191ms
+2023-11-14 18:02:15.017 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-14 18:02:15.019 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 5 text/plain;+charset=utf-8 2732.9142ms
+2023-11-14 18:16:08.687 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 18:16:08.912 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 18:16:08.914 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 18:16:08.918 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 18:16:08.920 +01:00 [INF] Hosting environment: Development
+2023-11-14 18:16:08.921 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 18:16:10.646 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 18:16:10.759 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 18:16:10.778 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:20:19.541 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 19:20:19.835 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 19:20:19.837 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 19:20:19.841 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 19:20:19.843 +01:00 [INF] Hosting environment: Development
+2023-11-14 19:20:19.844 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 19:20:21.781 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:20:21.917 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:20:21.939 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:20:22.013 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 19:20:22.020 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 19:20:22.026 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.8341ms.
+2023-11-14 19:23:43.058 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 19:23:43.363 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 19:23:43.365 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 19:23:43.368 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 19:23:43.369 +01:00 [INF] Hosting environment: Development
+2023-11-14 19:23:43.370 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 19:23:45.054 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:23:45.193 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:23:45.211 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:23:45.278 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 19:23:45.285 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 19:23:45.290 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.5487ms.
+2023-11-14 19:24:43.624 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 58406.4615ms
+2023-11-14 19:24:43.627 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:24:43.631 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Stream does not support reading.
+   at System.IO.Stream.CopyTo(Stream destination, Int32 bufferSize)
+   at WebApp.MVC7.Filters.TestActionFilter.Minifier.Minimize(Stream stream) in C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\Filters\TestActionFilter.cs:line 29
+   at WebApp.MVC7.Filters.TestActionFilter.OnActionExecuted(ActionExecutedContext context) in C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\Filters\TestActionFilter.cs:line 16
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-14 19:24:43.978 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 500 - text/html;+charset=utf-8 58928.7706ms
+2023-11-14 19:24:44.048 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 19:24:44.048 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 19:24:44.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 7.8510ms
+2023-11-14 19:24:44.068 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.4373ms
+2023-11-14 19:24:45.663 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:24:45.667 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:24:45.671 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:24:45.697 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-14 19:24:45.699 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-14 19:24:45.700 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9961ms.
+2023-11-14 19:30:33.428 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 19:30:33.648 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 19:30:33.650 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 19:30:33.655 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 19:30:33.657 +01:00 [INF] Hosting environment: Development
+2023-11-14 19:30:33.659 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 19:30:35.296 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:30:35.428 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:30:35.454 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:30:35.545 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 85.4552ms
+2023-11-14 19:30:35.550 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:30:35.554 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: The given key 'data' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at WebApp.MVC7.Filters.TestActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\Filters\TestActionFilter.cs:line 11
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-14 19:30:35.740 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 500 - text/html;+charset=utf-8 447.6106ms
+2023-11-14 19:30:35.786 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-14 19:30:35.786 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-14 19:30:35.812 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 25.8078ms
+2023-11-14 19:30:35.828 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.1356ms
+2023-11-14 19:31:30.049 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 19:31:30.280 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 19:31:30.281 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 19:31:30.284 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 19:31:30.285 +01:00 [INF] Hosting environment: Development
+2023-11-14 19:31:30.286 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 19:31:32.342 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:31:32.506 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:31:32.543 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:31:32.571 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 19.848ms
+2023-11-14 19:31:32.575 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:31:32.582 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 0 - 245.1375ms
+2023-11-14 19:31:39.493 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:31:39.495 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:31:39.497 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:31:39.499 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 0.908ms
+2023-11-14 19:31:39.501 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:31:39.503 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 0 - 10.2013ms
+2023-11-14 19:32:01.838 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-14 19:32:02.105 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-14 19:32:02.107 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-14 19:32:02.109 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-14 19:32:02.110 +01:00 [INF] Hosting environment: Development
+2023-11-14 19:32:02.111 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-14 19:32:04.083 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-14 19:32:04.213 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-14 19:32:04.238 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-14 19:32:04.319 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"

@@ -1,6 +1,4 @@
 using FluentValidation;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -8,7 +6,6 @@ using Serilog.Events;
 using WebApp.Data;
 using WebApp.Data.Entities;
 using WebApp.MVC7.FluentValidation;
-using WebApp.MVC7.Services;
 using WebApp.Repositories;
 using WebApp.Services;
 using WebApp.Services.Interfaces;
@@ -75,7 +72,7 @@ namespace WebApp.MVC7
             app.UseStaticFiles();
 
             app.UseRouting();
-
+          
             app.UseAuthorization();
             app.Map("/NotFound", () => new NotFoundResult());
             app.MapControllerRoute(

@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Core;
 using WebApp.Data.Entities;
+using WebApp.MVC7.Filters;
 using WebApp.MVC7.Models;
 using WebApp.Repositories;
 using WebApp.Services.Interfaces;
@@ -10,6 +12,7 @@ using WebApp.Services.Interfaces;
 namespace WebApp.MVC7.Controllers
 {
     //[NonController]
+    [LastVisitTrackerResourceFilter]
     public class ArticleController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -25,6 +28,7 @@ namespace WebApp.MVC7.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         public async Task<IActionResult> Index()
         {
             try
