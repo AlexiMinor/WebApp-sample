@@ -1,4 +1,5 @@
 using FluentValidation;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -41,6 +42,13 @@ namespace WebApp.MVC7
             //builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
             //builder.Services.AddScoped<IArticleSourceRepository, ArticleSourceRepository>();
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                {
+                    opt.LoginPath = new PathString("/User/Login");
+                    opt.AccessDeniedPath = new PathString("/User/AccessDenied");
+                    opt.LogoutPath = new PathString("/User/Logout");
+                });
             builder.Services
                 .AddValidatorsFromAssemblyContaining<UserRegisterValidator>();
 
@@ -48,9 +56,11 @@ namespace WebApp.MVC7
             builder.Services.AddScoped<IRepository<Article>, Repository<Article>>();
             builder.Services.AddScoped<IRepository<ArticleSource>, Repository<ArticleSource>>();
             builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
+            builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
             builder.Services.AddScoped<IRepository<User>, Repository<User>>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IArticleService, ArticleService>();
+            builder.Services.AddScoped<IUserService, UserService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -72,7 +82,7 @@ namespace WebApp.MVC7
             app.UseStaticFiles();
 
             app.UseRouting();
-          
+            app.UseAuthentication();
             app.UseAuthorization();
             app.Map("/NotFound", () => new NotFoundResult());
             app.MapControllerRoute(

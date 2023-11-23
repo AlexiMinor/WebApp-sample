@@ -1,14 +1,21 @@
-﻿using FluentValidation;
+﻿using System.Security.Claims;
+using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Core;
 using WebApp.Data.Entities;
 using WebApp.MVC7.Models;
+using WebApp.Services.Interfaces;
 
 namespace WebApp.MVC7.Controllers
 {
     public class UserController : Controller
     {
         private readonly IValidator<UserRegisterModel> _registerValidator;
+        private readonly IValidator<UserLoginModel> _loginValidator;
+        private readonly IUserService _userService;
         private readonly List<string> _users = new List<string>()
         {
             "Vasya",
@@ -19,30 +26,64 @@ namespace WebApp.MVC7.Controllers
             "Joseph"
         };
 
-        public UserController(IValidator<UserRegisterModel> registerValidator)
+        public UserController(IValidator<UserRegisterModel> registerValidator, IUserService userService, IValidator<UserLoginModel> loginValidator)
         {
             _registerValidator = registerValidator;
+            _userService = userService;
+            _loginValidator = loginValidator;
         }
 
         [HttpGet]
         public IActionResult Register()
         {
-            var model = new UserRegisterModel();
-            return View(model);
+            return View();
         }
+
+       
 
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterModel model)
         {
             var result = await _registerValidator.ValidateAsync(model);
-            if (result.IsValid)
+            if (result.IsValid && !_userService.IsUserExists(model.Email))
             {
+                var dto = new UserDto()
+                {
+                    Email = model.Email,
+                    Password = model.Password
+                };
+                await _userService.RegisterUser(dto);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(await _userService.Authenticate(dto.Email)));
                 return Ok(model);
             }
             result.AddToModelState(ModelState);
             return View(model);
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(UserLoginModel model)
+        {
+            var result = await _loginValidator.ValidateAsync(model);
+            if (result.IsValid && _userService.IsUserExists(model.Email))
+            {
+                if (await _userService.IsPasswordCorrect(model.Email, model.Password))
+                {
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(await _userService.Authenticate(model.Email)));
+                }
+                return RedirectToAction("Index","Home");
+            }
+            result.AddToModelState(ModelState);
+            return View(model);
+        }
         //domain/controller/action ? search = J & age = 39
         public IActionResult Search(string? search, int? age)
         {

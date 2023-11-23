@@ -1,0 +1,41 @@
+﻿@model WebApp.MVC7.Models.UserLoginModel
+
+@{
+    ViewBag.Title = "Login User";
+    Layout = "_Layout";
+}
+<div class="container">
+
+    <div class="text-center">
+        <h2>Login</h2>
+    </div>
+
+    <form asp-controller="User" asp-action="Login" method="post">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input type="text" class="form-control" asp-for="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input type="text" class="form-control" asp-for="Password">
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+                <input type="submit" class="btn btn-primary" value="Register" />
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+    {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

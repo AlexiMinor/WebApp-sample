@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using WebApp.MVC7.Filters;
 using WebApp.MVC7.Models;
 using WebApp.MVC7.Services;
@@ -14,7 +15,6 @@ namespace WebApp.MVC7.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            //_dbInitializer = dbInitializer;
         }
 
         //[TestResourceFilter(50, "Hello world")]
@@ -32,6 +32,7 @@ namespace WebApp.MVC7.Controllers
             return View();
         }
 
+        //[Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Privacy()
         {
             //await _dbInitializer.InsertArticles();

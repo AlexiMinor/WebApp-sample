@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{B6219BAA-DEE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Services", "Services\WebApp.Services.csproj", "{F61E8162-93AB-41F9-ABA7-51A46131F0C1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp.DAL", "WebApp.DAL", "{9100BC3C-A632-4DB3-8BAA-2301B12F5385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.MvcIdentity", "WebApp.MvcIdentity\WebApp.MvcIdentity.csproj", "{282908BC-748F-426B-89AB-0EF0F2D5693C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,11 +45,17 @@ Global
 		{F61E8162-93AB-41F9-ABA7-51A46131F0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F61E8162-93AB-41F9-ABA7-51A46131F0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F61E8162-93AB-41F9-ABA7-51A46131F0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282908BC-748F-426B-89AB-0EF0F2D5693C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282908BC-748F-426B-89AB-0EF0F2D5693C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282908BC-748F-426B-89AB-0EF0F2D5693C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282908BC-748F-426B-89AB-0EF0F2D5693C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A42F3A41-F27A-4E3C-BED9-982331AFA6C2} = {9100BC3C-A632-4DB3-8BAA-2301B12F5385}
+		{932EF25D-8C6C-4629-9192-6C5A321E5899} = {9100BC3C-A632-4DB3-8BAA-2301B12F5385}
 		{F61E8162-93AB-41F9-ABA7-51A46131F0C1} = {B6219BAA-DEEF-421E-8674-EAC288BA0BEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

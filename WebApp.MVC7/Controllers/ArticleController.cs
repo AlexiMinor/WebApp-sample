@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,19 +13,21 @@ using WebApp.Services.Interfaces;
 namespace WebApp.MVC7.Controllers
 {
     //[NonController]
-    [LastVisitTrackerResourceFilter]
+    //[LastVisitTrackerResourceFilter]
     public class ArticleController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IUserService _userService;
         private readonly IArticleService _articleService;
         private readonly ILogger<ArticleController> _logger;
         public ArticleController(IUnitOfWork unitOfWork, 
             ILogger<ArticleController> logger, 
-            IArticleService articleService)
+            IArticleService articleService, IUserService userService)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
             _articleService = articleService;
+            _userService = userService;
         }
 
         [HttpGet]
@@ -47,6 +50,12 @@ namespace WebApp.MVC7.Controllers
                         Description = article.Description,
                     })
                     .ToListAsync();
+
+                ViewBag.IsAdmin = await _userService
+                    .IsAdmin(
+                        HttpContext.User.Claims
+                            .FirstOrDefault(claim => claim.Type.Equals(ClaimsIdentity.DefaultNameClaimType))
+                            ?.Value);
                 _logger.LogInformation("Selecting all articles finished");
 
                 return View(articlesList);

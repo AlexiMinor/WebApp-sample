@@ -116,10 +116,32 @@ namespace WebApp.MVC7.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("WebApp.Data.Entities.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+                });
+
             modelBuilder.Entity("WebApp.Data.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserName")
@@ -127,6 +149,8 @@ namespace WebApp.MVC7.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Users");
                 });
@@ -167,6 +191,17 @@ namespace WebApp.MVC7.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("WebApp.Data.Entities.User", b =>
+                {
+                    b.HasOne("WebApp.Data.Entities.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("WebApp.Data.Entities.Article", b =>
                 {
                     b.Navigation("Comments");
@@ -180,6 +215,11 @@ namespace WebApp.MVC7.Migrations
             modelBuilder.Entity("WebApp.Data.Entities.Comment", b =>
                 {
                     b.Navigation("ChildComments");
+                });
+
+            modelBuilder.Entity("WebApp.Data.Entities.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("WebApp.Data.Entities.User", b =>

@@ -1,0 +1,1123 @@
+2023-11-16 17:24:11.778 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 17:24:11.864 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 17:24:11.866 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 17:24:11.867 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 17:24:11.890 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-16 17:24:11.902 +01:00 [INF] Applying migration '20231116162401_AddPasswordHash'.
+2023-11-16 17:24:11.955 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Users] ADD [PasswordHash] nvarchar(max) NOT NULL DEFAULT N'';
+2023-11-16 17:24:11.957 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231116162401_AddPasswordHash', N'7.0.13');
+2023-11-16 17:47:39.368 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 17:47:40.045 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 17:47:40.059 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 17:47:40.062 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 17:47:40.065 +01:00 [INF] Hosting environment: Development
+2023-11-16 17:47:40.066 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 17:47:43.511 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 17:47:43.779 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:47:43.822 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 17:47:44.119 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 17:47:55.287 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 17:47:55.297 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11160.7651ms.
+2023-11-16 17:47:55.369 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 17:47:55.880 +01:00 [INF] Executed ViewResult - view Index executed in 518.4383ms.
+2023-11-16 17:47:55.888 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 12062.6698ms
+2023-11-16 17:47:55.891 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:47:55.923 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - -
+2023-11-16 17:47:55.923 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-11-16 17:47:55.943 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 12438.2365ms
+2023-11-16 17:47:55.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2023-11-16 17:47:55.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 17:47:55.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-11-16 17:47:55.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 17:47:55.945 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/jquery/dist/jquery.min.js - -
+2023-11-16 17:47:55.958 +01:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2023-11-16 17:47:55.958 +01:00 [INF] The file /css/site.css was not modified
+2023-11-16 17:47:55.958 +01:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2023-11-16 17:47:55.960 +01:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2023-11-16 17:47:55.968 +01:00 [INF] The file /js/site.js was not modified
+2023-11-16 17:47:55.987 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - - - 304 - text/css 63.7768ms
+2023-11-16 17:47:55.988 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/jquery/dist/jquery.min.js - - - 304 - text/javascript 44.7629ms
+2023-11-16 17:47:56.006 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 63.0662ms
+2023-11-16 17:47:56.007 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - text/javascript 64.7505ms
+2023-11-16 17:47:56.009 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 86.5488ms
+2023-11-16 17:47:56.011 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - text/javascript 67.5495ms
+2023-11-16 17:47:56.028 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.4057ms
+2023-11-16 17:47:56.198 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 17:47:56.261 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 17:47:56.303 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 104.0244ms
+2023-11-16 17:48:00.724 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 17:48:00.732 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:00.736 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 17:48:02.938 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 2199.8957ms
+2023-11-16 17:48:02.941 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:02.947 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'WebApp.Services.Interfaces.IUserService' while attempting to activate 'WebApp.MVC7.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method27(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-16 17:48:03.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 500 - text/html;+charset=utf-8 2435.0940ms
+2023-11-16 17:48:03.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 17:48:03.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 17:48:03.163 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.8869ms
+2023-11-16 17:48:03.205 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.9797ms
+2023-11-16 17:48:33.979 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 17:48:33.984 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:33.987 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 17:48:34.066 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 76.125ms
+2023-11-16 17:48:34.068 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:34.070 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'WebApp.Services.Interfaces.IUserService' while attempting to activate 'WebApp.MVC7.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method38(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-16 17:48:43.647 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 17:48:43.944 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 17:48:43.946 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 17:48:43.949 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 17:48:43.950 +01:00 [INF] Hosting environment: Development
+2023-11-16 17:48:43.951 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 17:48:46.465 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 17:48:46.657 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:48:46.698 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 17:48:46.836 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 17:48:46.849 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 17:48:46.857 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.697ms.
+2023-11-16 17:48:46.876 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 17:48:47.138 +01:00 [INF] Executed ViewResult - view Index executed in 267.0264ms.
+2023-11-16 17:48:47.151 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 449.9419ms
+2023-11-16 17:48:47.154 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:48:47.197 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 735.3568ms
+2023-11-16 17:48:47.257 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 17:48:47.257 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 17:48:47.285 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 27.2358ms
+2023-11-16 17:48:47.300 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.8297ms
+2023-11-16 17:48:47.344 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 17:48:47.391 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 17:48:47.393 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 49.3723ms
+2023-11-16 17:48:47.543 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/favicon.ico - -
+2023-11-16 17:48:47.568 +01:00 [INF] The file /favicon.ico was not modified
+2023-11-16 17:48:47.570 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/favicon.ico - - - 304 - image/x-icon 27.0620ms
+2023-11-16 17:48:52.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 17:48:52.431 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:52.435 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 17:48:53.867 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 17:48:53.870 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7662ms.
+2023-11-16 17:48:53.876 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 17:48:54.182 +01:00 [INF] Executed ViewResult - view Register executed in 307.692ms.
+2023-11-16 17:48:54.189 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 1751.5598ms
+2023-11-16 17:48:54.191 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:48:54.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 17:48:54.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - -
+2023-11-16 17:48:54.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 17:48:54.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/lib/jquery-validation/dist/jquery.validate.min.js - -
+2023-11-16 17:48:54.253 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 17:48:54.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 44.6467ms
+2023-11-16 17:48:54.263 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 1839.6863ms
+2023-11-16 17:48:54.280 +01:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2023-11-16 17:48:54.284 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/jquery-validation/dist/jquery.validate.min.js - - - 304 - text/javascript 66.6527ms
+2023-11-16 17:48:54.286 +01:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2023-11-16 17:48:54.314 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 17:48:54.315 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - - - 304 - text/javascript 98.0055ms
+2023-11-16 17:48:54.318 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 64.9368ms
+2023-11-16 17:48:54.318 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 100.7196ms
+2023-11-16 17:49:09.706 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 251
+2023-11-16 17:49:09.716 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 17:49:09.726 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(WebApp.MVC7.Models.UserRegisterModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 17:49:09.873 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 17:59:53.158 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 17:59:53.428 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 17:59:53.430 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 17:59:53.434 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 17:59:53.436 +01:00 [INF] Hosting environment: Development
+2023-11-16 17:59:53.437 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 17:59:55.055 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 17:59:55.189 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:59:55.213 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 17:59:55.300 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 17:59:55.306 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 17:59:55.312 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.5598ms.
+2023-11-16 17:59:55.323 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 17:59:55.496 +01:00 [INF] Executed ViewResult - view Index executed in 175.115ms.
+2023-11-16 17:59:55.502 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 286.7961ms
+2023-11-16 17:59:55.504 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 17:59:55.535 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 17:59:55.535 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 17:59:55.536 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 486.1291ms
+2023-11-16 17:59:55.559 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 24.3026ms
+2023-11-16 17:59:55.564 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.1353ms
+2023-11-16 17:59:55.636 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 17:59:55.655 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 17:59:55.657 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 20.9356ms
+2023-11-16 18:00:02.355 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 18:00:02.360 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:00:02.363 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 18:00:03.340 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:00:03.343 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6922ms.
+2023-11-16 18:00:03.347 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 18:00:03.474 +01:00 [INF] Executed ViewResult - view Register executed in 128.2221ms.
+2023-11-16 18:00:03.477 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 1111.6069ms
+2023-11-16 18:00:03.480 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:00:03.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 18:00:03.493 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.9206ms
+2023-11-16 18:00:03.494 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 1139.4918ms
+2023-11-16 18:00:03.503 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 18:00:03.527 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.2694ms
+2023-11-16 18:00:03.531 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 18:00:03.536 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 18:00:03.538 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.1935ms
+2023-11-16 18:00:11.277 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 251
+2023-11-16 18:00:11.285 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:00:11.292 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(WebApp.MVC7.Models.UserRegisterModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 18:00:11.395 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:00:12.507 +01:00 [INF] Executed DbCommand (63ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [PasswordHash], [UserName])
+VALUES (@p0, @p1, @p2);
+2023-11-16 18:00:12.553 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-11-16 18:00:12.555 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1159.0651ms.
+2023-11-16 18:00:12.565 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.MVC7.Models.UserRegisterModel'.
+2023-11-16 18:00:12.599 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 1305.5552ms
+2023-11-16 18:00:12.601 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:00:12.607 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 251 - 200 - application/json;+charset=utf-8 1330.2839ms
+2023-11-16 18:01:20.268 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 18:01:20.512 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 18:01:20.516 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 18:01:20.524 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 18:01:20.538 +01:00 [INF] Hosting environment: Development
+2023-11-16 18:01:20.540 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 18:01:22.121 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 18:01:22.237 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 18:01:22.262 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 18:01:22.337 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:01:22.344 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 18:01:22.351 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.8149ms.
+2023-11-16 18:01:22.363 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 18:01:22.606 +01:00 [INF] Executed ViewResult - view Index executed in 244.5415ms.
+2023-11-16 18:01:22.612 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 348.1878ms
+2023-11-16 18:01:22.615 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 18:01:22.634 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 515.9947ms
+2023-11-16 18:01:22.642 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 18:01:22.642 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 18:01:22.675 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 32.9825ms
+2023-11-16 18:01:22.680 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.7906ms
+2023-11-16 18:01:22.789 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 18:01:22.849 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 18:01:22.851 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 62.4457ms
+2023-11-16 18:01:51.258 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 18:01:51.306 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:01:51.311 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 18:01:52.306 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:01:52.308 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.485ms.
+2023-11-16 18:01:52.310 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 18:01:52.428 +01:00 [INF] Executed ViewResult - view Register executed in 118.4471ms.
+2023-11-16 18:01:52.430 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 1116.4023ms
+2023-11-16 18:01:52.433 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:01:52.444 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 18:01:52.447 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.5644ms
+2023-11-16 18:01:52.449 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 1191.2274ms
+2023-11-16 18:01:52.451 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 18:01:52.461 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.0186ms
+2023-11-16 18:01:52.488 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 18:01:52.493 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 18:01:52.495 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.1115ms
+2023-11-16 18:02:11.228 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 251
+2023-11-16 18:02:11.236 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:02:11.243 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(WebApp.MVC7.Models.UserRegisterModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 18:02:11.340 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:02:12.076 +01:00 [INF] Executed DbCommand (91ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [PasswordHash], [UserName])
+VALUES (@p0, @p1, @p2);
+2023-11-16 18:02:12.124 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-11-16 18:02:12.127 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 785.3204ms.
+2023-11-16 18:02:12.136 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.MVC7.Models.UserRegisterModel'.
+2023-11-16 18:02:12.161 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 915.2037ms
+2023-11-16 18:02:12.163 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 18:02:12.168 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 251 - 200 - application/json;+charset=utf-8 940.3437ms
+2023-11-16 18:02:40.312 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 18:02:40.317 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 18:02:40.319 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 18:02:40.338 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:02:40.339 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 18:02:40.340 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8773ms.
+2023-11-16 18:02:40.342 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 18:02:40.354 +01:00 [INF] Executed ViewResult - view Index executed in 12.0764ms.
+2023-11-16 18:02:40.355 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 34.441ms
+2023-11-16 18:02:40.357 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 18:02:40.361 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 48.6191ms
+2023-11-16 18:02:40.368 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 18:02:40.371 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 18:02:40.374 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.9862ms
+2023-11-16 18:02:40.386 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.9679ms
+2023-11-16 18:02:40.391 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 18:02:40.398 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 18:02:40.400 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 9.3134ms
+2023-11-16 18:02:42.064 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 18:02:42.073 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 18:02:42.078 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Privacy() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 18:02:42.094 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 18:02:42.096 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7262ms.
+2023-11-16 18:02:42.099 +01:00 [INF] Executing ViewResult, running view Privacy.
+2023-11-16 18:02:42.105 +01:00 [INF] Executed ViewResult - view Privacy executed in 7.2885ms.
+2023-11-16 18:02:42.107 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) in 27.0936ms
+2023-11-16 18:02:42.108 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 18:02:42.110 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 200 - text/html;+charset=utf-8 46.7264ms
+2023-11-16 18:02:42.114 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 18:02:42.114 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 18:02:42.126 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 11.9981ms
+2023-11-16 18:02:42.147 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 18:02:42.150 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.6113ms
+2023-11-16 18:02:42.153 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 18:02:42.155 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.0268ms
+2023-11-16 18:02:50.236 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 18:02:50.245 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 18:02:50.247 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Privacy() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 18:02:50.273 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:14:12.017 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 19:14:12.259 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 19:14:12.260 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 19:14:12.264 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 19:14:12.265 +01:00 [INF] Hosting environment: Development
+2023-11-16 19:14:12.266 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 19:14:14.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:14:14.253 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:14:14.292 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:14:14.457 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:14:14.464 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:14:14.470 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.6912ms.
+2023-11-16 19:14:14.481 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:14:14.675 +01:00 [INF] Executed ViewResult - view Index executed in 196.8532ms.
+2023-11-16 19:14:14.681 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 385.4963ms
+2023-11-16 19:14:14.683 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:14:14.719 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 623.8107ms
+2023-11-16 19:14:14.721 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:14:14.721 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:14:14.735 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 13.9047ms
+2023-11-16 19:14:14.745 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.6267ms
+2023-11-16 19:14:14.821 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:14:14.840 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:14:14.842 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 21.6753ms
+2023-11-16 19:14:28.133 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:14:28.146 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-11-16 19:14:28.154 +01:00 [INF] AuthenticationScheme: Cookies was challenged.
+2023-11-16 19:14:28.155 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 302 0 - 22.3044ms
+2023-11-16 19:14:28.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:14:28.163 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:14:28.166 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:14:29.122 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:14:29.124 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3323ms.
+2023-11-16 19:14:29.128 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:14:29.252 +01:00 [INF] Executed ViewResult - view Login executed in 125.6715ms.
+2023-11-16 19:14:29.254 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 1086.0549ms
+2023-11-16 19:14:29.256 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:14:29.268 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 1107.9267ms
+2023-11-16 19:14:29.271 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:14:29.273 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.4439ms
+2023-11-16 19:14:29.277 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:14:29.288 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.0425ms
+2023-11-16 19:14:29.305 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:14:29.310 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:14:29.312 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.4138ms
+2023-11-16 19:15:26.519 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:15:26.540 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 20.0847ms
+2023-11-16 19:15:26.554 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:15:26.570 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:15:26.573 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 18.5243ms
+2023-11-16 19:15:31.245 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 19:15:31.249 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:31.251 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:15:31.323 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:15:31.325 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2429ms.
+2023-11-16 19:15:31.327 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 19:15:31.355 +01:00 [INF] Executed ViewResult - view Register executed in 27.8855ms.
+2023-11-16 19:15:31.356 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 103.2746ms
+2023-11-16 19:15:31.358 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:31.370 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:15:31.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:15:31.374 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 129.1621ms
+2023-11-16 19:15:31.386 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:15:31.389 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 18.4963ms
+2023-11-16 19:15:31.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.7419ms
+2023-11-16 19:15:31.404 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:15:31.406 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 20.1994ms
+2023-11-16 19:15:39.829 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 250
+2023-11-16 19:15:39.831 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:39.838 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(WebApp.MVC7.Models.UserRegisterModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:15:39.894 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:15:40.700 +01:00 [INF] Executed DbCommand (55ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:15:40.971 +01:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [PasswordHash], [UserName])
+VALUES (@p0, @p1, @p2);
+2023-11-16 19:15:41.000 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-11-16 19:15:41.003 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1107.8555ms.
+2023-11-16 19:15:41.012 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.MVC7.Models.UserRegisterModel'.
+2023-11-16 19:15:41.036 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 1194.3434ms
+2023-11-16 19:15:41.038 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:41.043 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 250 - 200 - application/json;+charset=utf-8 1213.9765ms
+2023-11-16 19:15:52.581 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 19:15:52.586 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:52.587 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:15:52.606 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:15:52.607 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0215ms.
+2023-11-16 19:15:52.609 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 19:15:52.625 +01:00 [INF] Executed ViewResult - view Register executed in 16.1347ms.
+2023-11-16 19:15:52.627 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 37.4654ms
+2023-11-16 19:15:52.628 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:15:52.631 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 49.4215ms
+2023-11-16 19:15:52.634 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:15:52.634 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:15:52.635 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.5591ms
+2023-11-16 19:15:52.642 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.7899ms
+2023-11-16 19:15:52.650 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:15:52.653 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:15:52.655 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.0929ms
+2023-11-16 19:15:53.500 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:15:53.505 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:15:53.509 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Privacy() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:15:53.529 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:16:13.039 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 19508.3312ms.
+2023-11-16 19:16:13.059 +01:00 [INF] Executing ViewResult, running view Privacy.
+2023-11-16 19:16:13.071 +01:00 [INF] Executed ViewResult - view Privacy executed in 12.9933ms.
+2023-11-16 19:16:13.073 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) in 19561.8083ms
+2023-11-16 19:16:13.074 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:16:13.078 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 200 - text/html;+charset=utf-8 19576.8661ms
+2023-11-16 19:16:13.092 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:16:13.092 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:16:13.098 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.4916ms
+2023-11-16 19:16:13.112 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:16:13.147 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.6528ms
+2023-11-16 19:16:13.162 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:16:13.164 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 52.3220ms
+2023-11-16 19:16:13.995 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:16:13.999 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:16:14.003 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Privacy() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:16:14.030 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:16:36.407 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 22341.406ms.
+2023-11-16 19:16:36.414 +01:00 [INF] Executing ViewResult, running view Privacy.
+2023-11-16 19:16:36.434 +01:00 [INF] Executed ViewResult - view Privacy executed in 21.3534ms.
+2023-11-16 19:16:36.448 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) in 22442.6171ms
+2023-11-16 19:16:36.449 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:16:36.453 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 200 - text/html;+charset=utf-8 22457.5292ms
+2023-11-16 19:16:36.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:16:36.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:16:36.457 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.1393ms
+2023-11-16 19:16:36.473 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:16:36.513 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.2192ms
+2023-11-16 19:16:36.513 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:16:36.515 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 42.7103ms
+2023-11-16 19:20:54.748 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 19:20:54.821 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 19:20:54.823 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 19:20:54.824 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 19:20:54.845 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-16 19:20:54.858 +01:00 [INF] Applying migration '20231116182047_AddRoles'.
+2023-11-16 19:20:54.910 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Users] ADD [RoleId] uniqueidentifier NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+2023-11-16 19:20:54.914 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Role] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Role] PRIMARY KEY ([Id])
+);
+2023-11-16 19:20:54.924 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_RoleId] ON [Users] ([RoleId]);
+2023-11-16 19:20:54.938 +01:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Users] ADD CONSTRAINT [FK_Users_Role_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Role] ([Id]) ON DELETE CASCADE;
+2023-11-16 19:21:41.443 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 19:21:41.493 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 19:21:41.495 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-16 19:21:41.496 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-16 19:21:41.516 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-16 19:21:41.530 +01:00 [INF] Applying migration '20231116182047_AddRoles'.
+2023-11-16 19:21:41.589 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Users] ADD [RoleId] uniqueidentifier NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+2023-11-16 19:21:41.594 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Role] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Role] PRIMARY KEY ([Id])
+);
+2023-11-16 19:21:41.596 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_RoleId] ON [Users] ([RoleId]);
+2023-11-16 19:21:41.598 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Users] ADD CONSTRAINT [FK_Users_Role_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Role] ([Id]) ON DELETE CASCADE;
+2023-11-16 19:21:41.600 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231116182047_AddRoles', N'7.0.13');
+2023-11-16 19:34:45.762 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 19:34:46.005 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 19:34:46.009 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 19:34:46.012 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 19:34:46.013 +01:00 [INF] Hosting environment: Development
+2023-11-16 19:34:46.015 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 19:34:47.841 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:34:47.988 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:34:48.013 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:34:48.102 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:34:48.112 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:34:48.121 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.9104ms.
+2023-11-16 19:34:48.137 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:34:48.388 +01:00 [INF] Executed ViewResult - view Index executed in 256.798ms.
+2023-11-16 19:34:48.395 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 378.865ms
+2023-11-16 19:34:48.397 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:34:48.434 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 595.8954ms
+2023-11-16 19:34:48.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:34:48.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:34:48.461 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 24.6252ms
+2023-11-16 19:34:48.470 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.8727ms
+2023-11-16 19:34:48.547 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:34:48.570 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:34:48.574 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 26.5393ms
+2023-11-16 19:34:54.291 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ArticleSource/List - -
+2023-11-16 19:34:54.296 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-11-16 19:34:54.300 +01:00 [INF] Route matched with {action = "List", controller = "ArticleSource"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller WebApp.MVC7.Controllers.ArticleSourceController (WebApp.MVC7).
+2023-11-16 19:34:55.278 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:34:56.009 +01:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[RssUrl], [a].[Url]
+FROM [ArticleSources] AS [a]
+2023-11-16 19:34:56.131 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 849.3318ms.
+2023-11-16 19:34:56.137 +01:00 [INF] Executing ViewResult, running view List.
+2023-11-16 19:34:56.149 +01:00 [INF] Executed ViewResult - view List executed in 13.3413ms.
+2023-11-16 19:34:56.151 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) in 1848.2928ms
+2023-11-16 19:34:56.152 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-11-16 19:34:56.161 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:34:56.161 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:34:56.177 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 16.1926ms
+2023-11-16 19:34:56.186 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ArticleSource/List - - - 200 - text/html;+charset=utf-8 1895.0774ms
+2023-11-16 19:34:56.190 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.8447ms
+2023-11-16 19:34:56.200 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:34:56.205 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:34:56.208 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 8.5327ms
+2023-11-16 19:34:57.365 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:34:57.377 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-11-16 19:34:57.383 +01:00 [INF] AuthenticationScheme: Cookies was challenged.
+2023-11-16 19:34:57.384 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 302 0 - 19.1185ms
+2023-11-16 19:34:57.388 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:34:57.390 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:34:57.397 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:34:57.487 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:34:57.492 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7478ms.
+2023-11-16 19:34:57.500 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:34:57.638 +01:00 [INF] Executed ViewResult - view Login executed in 140.1515ms.
+2023-11-16 19:34:57.641 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 241.545ms
+2023-11-16 19:34:57.643 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:34:57.648 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 260.6176ms
+2023-11-16 19:34:57.655 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:34:57.656 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:34:57.659 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.3157ms
+2023-11-16 19:34:57.671 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.1201ms
+2023-11-16 19:34:57.677 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:34:57.681 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:34:57.684 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.1009ms
+2023-11-16 19:35:06.655 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220
+2023-11-16 19:35:06.670 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:06.677 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebApp.MVC7.Models.UserLoginModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:35:06.721 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:35:06.901 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:35:06.911 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 187.754ms.
+2023-11-16 19:35:06.915 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:35:06.932 +01:00 [INF] Executed ViewResult - view Login executed in 17.87ms.
+2023-11-16 19:35:06.935 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 255.5157ms
+2023-11-16 19:35:06.936 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:06.940 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220 - 200 - text/html;+charset=utf-8 285.6786ms
+2023-11-16 19:35:06.944 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:35:06.944 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:35:06.950 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.8299ms
+2023-11-16 19:35:06.954 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3684ms
+2023-11-16 19:35:06.961 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:35:06.966 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:35:06.968 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.2955ms
+2023-11-16 19:35:08.446 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article/Favorite - -
+2023-11-16 19:35:08.449 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7)'
+2023-11-16 19:35:08.452 +01:00 [INF] Route matched with {action = "Favorite", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Favorite() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:35:08.459 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-16 19:35:08.461 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7) in 6.2962ms
+2023-11-16 19:35:08.464 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7)'
+2023-11-16 19:35:08.466 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article/Favorite - - - 200 5 text/plain;+charset=utf-8 20.1226ms
+2023-11-16 19:35:10.679 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:35:10.681 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:10.683 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:35:10.708 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:35:10.710 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0197ms.
+2023-11-16 19:35:10.712 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:35:10.729 +01:00 [INF] Executed ViewResult - view Login executed in 16.8156ms.
+2023-11-16 19:35:10.731 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 45.7104ms
+2023-11-16 19:35:10.736 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:10.741 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 62.1568ms
+2023-11-16 19:35:10.749 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:35:10.755 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.6503ms
+2023-11-16 19:35:10.775 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:35:10.779 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:35:10.780 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.3827ms
+2023-11-16 19:35:11.677 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:35:11.679 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:35:11.680 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:35:11.702 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:35:11.703 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:35:11.704 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9935ms.
+2023-11-16 19:35:11.706 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:35:11.712 +01:00 [INF] Executed ViewResult - view Index executed in 5.1159ms.
+2023-11-16 19:35:11.713 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 30.3666ms
+2023-11-16 19:35:11.715 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:35:11.718 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 41.1027ms
+2023-11-16 19:35:11.722 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:35:11.722 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:35:11.724 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.8137ms
+2023-11-16 19:35:11.733 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.4303ms
+2023-11-16 19:35:11.758 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:35:11.763 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:35:11.766 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 8.7326ms
+2023-11-16 19:35:12.743 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:35:12.747 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-11-16 19:35:12.748 +01:00 [INF] AuthenticationScheme: Cookies was challenged.
+2023-11-16 19:35:12.749 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 302 0 - 6.6317ms
+2023-11-16 19:35:12.751 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:35:12.752 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:12.753 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:35:12.771 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:35:12.773 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0155ms.
+2023-11-16 19:35:12.775 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:35:12.780 +01:00 [INF] Executed ViewResult - view Login executed in 5.2129ms.
+2023-11-16 19:35:12.782 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 26.1747ms
+2023-11-16 19:35:12.783 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:35:12.788 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 36.6228ms
+2023-11-16 19:35:12.792 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:35:12.792 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:35:12.797 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 4.2748ms
+2023-11-16 19:35:12.801 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.0326ms
+2023-11-16 19:35:12.808 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:35:12.812 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:35:12.814 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.2897ms
+2023-11-16 19:38:01.137 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:38:01.140 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:01.143 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:38:01.167 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:38:01.169 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0188ms.
+2023-11-16 19:38:01.172 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:38:01.180 +01:00 [INF] Executed ViewResult - view Login executed in 8.6642ms.
+2023-11-16 19:38:01.181 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 35.7852ms
+2023-11-16 19:38:01.185 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:01.201 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 61.2099ms
+2023-11-16 19:38:01.202 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:38:01.202 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:38:01.208 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.8893ms
+2023-11-16 19:38:01.228 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:38:01.233 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.4841ms
+2023-11-16 19:38:01.238 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:38:01.240 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 12.0075ms
+2023-11-16 19:38:03.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-16 19:38:03.795 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:38:03.798 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:38:03.801 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-16 19:38:03.802 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 1.3211ms
+2023-11-16 19:38:03.804 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:38:03.805 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 5 text/plain;+charset=utf-8 12.7520ms
+2023-11-16 19:38:04.965 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:38:04.968 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:04.969 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:38:05.003 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:38:05.008 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0312ms.
+2023-11-16 19:38:05.012 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:38:05.018 +01:00 [INF] Executed ViewResult - view Login executed in 6.1165ms.
+2023-11-16 19:38:05.020 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 48.0922ms
+2023-11-16 19:38:05.024 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:05.027 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 62.0543ms
+2023-11-16 19:38:05.030 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:38:05.032 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.0131ms
+2023-11-16 19:38:05.045 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:38:05.049 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:38:05.051 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.9950ms
+2023-11-16 19:38:06.329 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:38:06.331 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:38:06.335 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:38:06.353 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:38:06.355 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:38:06.356 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9858ms.
+2023-11-16 19:38:06.358 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:38:06.363 +01:00 [INF] Executed ViewResult - view Index executed in 5.6537ms.
+2023-11-16 19:38:06.365 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 27.8067ms
+2023-11-16 19:38:06.368 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:38:06.371 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 41.9476ms
+2023-11-16 19:38:06.375 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:38:06.375 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:38:06.380 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 4.7091ms
+2023-11-16 19:38:06.387 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2421ms
+2023-11-16 19:38:06.400 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:38:06.405 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:38:06.407 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.1394ms
+2023-11-16 19:38:07.219 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:38:07.221 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+2023-11-16 19:38:07.223 +01:00 [INF] AuthenticationScheme: Cookies was challenged.
+2023-11-16 19:38:07.224 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 302 0 - 5.1604ms
+2023-11-16 19:38:07.226 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:38:07.227 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:07.228 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:38:07.250 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:38:07.253 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0225ms.
+2023-11-16 19:38:07.256 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:38:07.261 +01:00 [INF] Executed ViewResult - view Login executed in 4.971ms.
+2023-11-16 19:38:07.262 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 32.0096ms
+2023-11-16 19:38:07.264 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:07.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 41.0386ms
+2023-11-16 19:38:07.271 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:38:07.271 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:38:07.275 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.9908ms
+2023-11-16 19:38:07.283 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2896ms
+2023-11-16 19:38:07.287 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:38:07.294 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:38:07.299 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 11.8832ms
+2023-11-16 19:38:11.298 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220
+2023-11-16 19:38:11.300 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:11.305 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebApp.MVC7.Models.UserLoginModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:38:11.329 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:38:11.338 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:38:11.343 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11.4617ms.
+2023-11-16 19:38:11.344 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:38:11.349 +01:00 [INF] Executed ViewResult - view Login executed in 5.3005ms.
+2023-11-16 19:38:11.351 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 43.0091ms
+2023-11-16 19:38:11.353 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:38:11.356 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220 - 200 - text/html;+charset=utf-8 58.4270ms
+2023-11-16 19:38:11.359 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:38:11.359 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:38:11.362 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.7649ms
+2023-11-16 19:38:11.373 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.8646ms
+2023-11-16 19:38:11.380 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:38:11.387 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:38:11.390 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 10.6768ms
+2023-11-16 19:39:38.965 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:39:38.977 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:39:38.979 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:39:39.000 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:14.638 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:40:14.657 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 35654.9795ms.
+2023-11-16 19:40:14.661 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:40:14.689 +01:00 [INF] Executed ViewResult - view Index executed in 28.2001ms.
+2023-11-16 19:40:14.691 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 35707.0805ms
+2023-11-16 19:40:14.693 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:40:14.698 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 35733.8806ms
+2023-11-16 19:40:14.708 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:40:14.708 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:40:14.729 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 20.3673ms
+2023-11-16 19:40:14.732 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:40:14.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.1149ms
+2023-11-16 19:40:14.748 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:40:14.749 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 17.6813ms
+2023-11-16 19:40:22.096 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:40:22.099 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+2023-11-16 19:40:22.101 +01:00 [INF] AuthenticationScheme: Cookies was challenged.
+2023-11-16 19:40:22.102 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 302 0 - 6.0465ms
+2023-11-16 19:40:22.103 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - -
+2023-11-16 19:40:22.105 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:22.106 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:40:22.123 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:22.126 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0186ms.
+2023-11-16 19:40:22.130 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:40:22.135 +01:00 [INF] Executed ViewResult - view Login executed in 4.969ms.
+2023-11-16 19:40:22.137 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 28.674ms
+2023-11-16 19:40:22.139 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:22.144 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/User/Login?ReturnUrl=%2FHome%2FPrivacy - - - 200 - text/html;+charset=utf-8 40.7945ms
+2023-11-16 19:40:22.148 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:40:22.148 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:40:22.150 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.9640ms
+2023-11-16 19:40:22.158 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.9772ms
+2023-11-16 19:40:22.166 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:40:22.170 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:40:22.174 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.7441ms
+2023-11-16 19:40:25.654 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220
+2023-11-16 19:40:25.655 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:25.657 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebApp.MVC7.Models.UserLoginModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:40:25.685 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:25.690 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:40:25.695 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8.5462ms.
+2023-11-16 19:40:25.697 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:40:25.703 +01:00 [INF] Executed ViewResult - view Login executed in 5.8239ms.
+2023-11-16 19:40:25.707 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 43.3124ms
+2023-11-16 19:40:25.711 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:25.716 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220 - 200 - text/html;+charset=utf-8 62.5948ms
+2023-11-16 19:40:25.720 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:40:25.720 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:40:25.725 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 4.1601ms
+2023-11-16 19:40:25.738 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.1688ms
+2023-11-16 19:40:25.752 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:40:25.758 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:40:25.763 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 10.6136ms
+2023-11-16 19:40:28.165 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220
+2023-11-16 19:40:28.167 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:28.168 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebApp.MVC7.Models.UserLoginModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:40:28.187 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:28.189 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:40:28.193 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5.3512ms.
+2023-11-16 19:40:28.195 +01:00 [INF] Executing ViewResult, running view Login.
+2023-11-16 19:40:28.200 +01:00 [INF] Executed ViewResult - view Login executed in 4.6667ms.
+2023-11-16 19:40:28.201 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7) in 31.1483ms
+2023-11-16 19:40:28.203 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Login (WebApp.MVC7)'
+2023-11-16 19:40:28.209 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Login application/x-www-form-urlencoded 220 - 200 - text/html;+charset=utf-8 43.7110ms
+2023-11-16 19:40:28.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:40:28.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:40:28.216 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 4.4293ms
+2023-11-16 19:40:28.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.1726ms
+2023-11-16 19:40:28.231 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:40:28.235 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:40:28.237 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 5.9370ms
+2023-11-16 19:40:40.939 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/user/register - -
+2023-11-16 19:40:40.941 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:40:40.945 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:40:40.963 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:40.965 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2316ms.
+2023-11-16 19:40:40.968 +01:00 [INF] Executing ViewResult, running view Register.
+2023-11-16 19:40:40.998 +01:00 [INF] Executed ViewResult - view Register executed in 30.9663ms.
+2023-11-16 19:40:41.000 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 52.8125ms
+2023-11-16 19:40:41.002 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:40:41.005 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/user/register - - - 200 - text/html;+charset=utf-8 65.7252ms
+2023-11-16 19:40:41.009 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:40:41.009 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:40:41.011 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.1640ms
+2023-11-16 19:40:41.030 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:40:41.030 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.8831ms
+2023-11-16 19:40:41.034 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:40:41.037 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.6825ms
+2023-11-16 19:40:58.773 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 250
+2023-11-16 19:40:58.775 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:40:58.786 +01:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(WebApp.MVC7.Models.UserRegisterModel) on controller WebApp.MVC7.Controllers.UserController (WebApp.MVC7).
+2023-11-16 19:40:58.806 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:40:58.812 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-16 19:40:58.838 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Role] AS [r]
+WHERE [r].[Name] = N'User'
+2023-11-16 19:40:59.053 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Guid), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [PasswordHash], [RoleId], [UserName])
+VALUES (@p0, @p1, @p2, @p3);
+2023-11-16 19:40:59.079 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__userName_0
+2023-11-16 19:41:15.937 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Role] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-11-16 19:41:15.946 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-11-16 19:41:15.948 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 17139.9166ms.
+2023-11-16 19:41:15.956 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.MVC7.Models.UserRegisterModel'.
+2023-11-16 19:41:15.977 +01:00 [INF] Executed action WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7) in 17188.7687ms
+2023-11-16 19:41:15.979 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.UserController.Register (WebApp.MVC7)'
+2023-11-16 19:41:15.982 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7227/User/Register application/x-www-form-urlencoded 250 - 200 - application/json;+charset=utf-8 17208.7235ms
+2023-11-16 19:41:22.712 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:41:22.717 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:41:22.718 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:41:22.742 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:41:33.420 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:41:33.422 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10677.6483ms.
+2023-11-16 19:41:33.426 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:41:33.432 +01:00 [INF] Executed ViewResult - view Index executed in 6.1487ms.
+2023-11-16 19:41:33.433 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 10711.1893ms
+2023-11-16 19:41:33.436 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:41:33.439 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 10726.8973ms
+2023-11-16 19:41:33.442 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:41:33.442 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:41:33.444 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.7169ms
+2023-11-16 19:41:33.466 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.4915ms
+2023-11-16 19:41:33.497 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:41:33.501 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:41:33.504 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.9430ms
+2023-11-16 19:41:35.461 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Home/Privacy - -
+2023-11-16 19:41:35.464 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:41:35.467 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Privacy() on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:41:35.486 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:41:35.489 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7478ms.
+2023-11-16 19:41:35.491 +01:00 [INF] Executing ViewResult, running view Privacy.
+2023-11-16 19:41:35.498 +01:00 [INF] Executed ViewResult - view Privacy executed in 7.2829ms.
+2023-11-16 19:41:35.500 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7) in 29.2669ms
+2023-11-16 19:41:35.502 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Privacy (WebApp.MVC7)'
+2023-11-16 19:41:35.504 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Home/Privacy - - - 200 - text/html;+charset=utf-8 43.1548ms
+2023-11-16 19:41:35.507 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:41:35.507 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:41:35.511 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.7699ms
+2023-11-16 19:41:35.525 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.6885ms
+2023-11-16 19:41:35.530 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:41:35.535 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:41:35.538 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.4462ms
+2023-11-16 19:45:34.185 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 19:45:34.445 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 19:45:34.448 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 19:45:34.452 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 19:45:34.454 +01:00 [INF] Hosting environment: Development
+2023-11-16 19:45:34.457 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 19:45:36.315 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:45:36.432 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:45:36.459 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:45:36.558 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:45:39.520 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:45:39.527 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2958.4202ms.
+2023-11-16 19:45:39.538 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:45:39.711 +01:00 [INF] Executed ViewResult - view Index executed in 173.5614ms.
+2023-11-16 19:45:39.717 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 3255.2415ms
+2023-11-16 19:45:39.718 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:45:39.750 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 3438.1753ms
+2023-11-16 19:45:39.777 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:45:39.777 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:45:39.794 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 16.8501ms
+2023-11-16 19:45:39.802 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.7497ms
+2023-11-16 19:45:39.842 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:45:39.865 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:45:39.867 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 25.5508ms
+2023-11-16 19:45:41.758 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-16 19:45:41.764 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:45:41.771 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:45:41.776 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-16 19:45:41.779 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 5.9088ms
+2023-11-16 19:45:41.781 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:45:41.782 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 5 text/plain;+charset=utf-8 23.9841ms
+2023-11-16 19:46:19.169 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 19:46:19.337 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 19:46:19.339 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 19:46:19.341 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 19:46:19.342 +01:00 [INF] Hosting environment: Development
+2023-11-16 19:46:19.343 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 19:46:21.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:46:21.263 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:46:21.301 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:46:21.384 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:46:21.390 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:46:21.395 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.7586ms.
+2023-11-16 19:46:21.406 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:46:21.601 +01:00 [INF] Executed ViewResult - view Index executed in 194.6305ms.
+2023-11-16 19:46:21.607 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 302.6625ms
+2023-11-16 19:46:21.610 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:46:21.654 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 558.5977ms
+2023-11-16 19:46:21.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:46:21.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:46:21.713 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 11.8967ms
+2023-11-16 19:46:21.749 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.4383ms
+2023-11-16 19:46:21.776 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:46:21.802 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:46:21.805 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 29.5435ms
+2023-11-16 19:46:23.373 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-16 19:46:23.378 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:46:23.383 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:46:23.388 +01:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2023-11-16 19:46:23.390 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 3.8042ms
+2023-11-16 19:46:23.391 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:46:23.392 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 5 text/plain;+charset=utf-8 19.3578ms
+2023-11-16 19:46:42.253 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-16 19:46:42.261 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:46:42.271 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:46:43.154 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:46:43.165 +01:00 [INF] Selecting all articles started
+2023-11-16 19:46:43.948 +01:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-16 19:46:44.000 +01:00 [INF] Selecting all articles finished
+2023-11-16 19:46:44.002 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 846.3916ms.
+2023-11-16 19:46:44.008 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:46:44.053 +01:00 [INF] Executed ViewResult - view Index executed in 45.7429ms.
+2023-11-16 19:46:44.054 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 1777.2248ms
+2023-11-16 19:46:44.056 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:46:44.075 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 1821.7491ms
+2023-11-16 19:46:44.078 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:46:44.079 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 1.6757ms
+2023-11-16 19:46:44.090 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:46:44.101 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.4210ms
+2023-11-16 19:46:44.169 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:46:44.175 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:46:44.176 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 6.9078ms
+2023-11-16 19:46:52.465 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article/Create - -
+2023-11-16 19:46:52.470 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Create (WebApp.MVC7)'
+2023-11-16 19:46:52.475 +01:00 [INF] Route matched with {action = "Create", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:46:52.548 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Create (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:46:52.580 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Name], [a].[Id]
+FROM [ArticleSources] AS [a]
+2023-11-16 19:46:52.585 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Create (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 35.6982ms.
+2023-11-16 19:46:52.588 +01:00 [INF] Executing ViewResult, running view Create.
+2023-11-16 19:46:52.640 +01:00 [INF] Executed ViewResult - view Create executed in 52.2494ms.
+2023-11-16 19:46:52.641 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Create (WebApp.MVC7) in 163.4245ms
+2023-11-16 19:46:52.643 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Create (WebApp.MVC7)'
+2023-11-16 19:46:52.647 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article/Create - - - 200 - text/html;+charset=utf-8 182.4153ms
+2023-11-16 19:46:52.651 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:46:52.651 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:46:52.654 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.8537ms
+2023-11-16 19:46:52.663 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.6217ms
+2023-11-16 19:46:52.670 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:46:52.675 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:46:52.678 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 7.3951ms
+2023-11-16 19:46:53.954 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:46:53.957 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.3693ms
+2023-11-16 19:46:53.990 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:46:53.995 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:46:53.998 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 8.0071ms
+2023-11-16 19:46:55.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ArticleSource/List - -
+2023-11-16 19:46:55.258 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-11-16 19:46:55.261 +01:00 [INF] Route matched with {action = "List", controller = "ArticleSource"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller WebApp.MVC7.Controllers.ArticleSourceController (WebApp.MVC7).
+2023-11-16 19:46:55.295 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:46:55.324 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[RssUrl], [a].[Url]
+FROM [ArticleSources] AS [a]
+2023-11-16 19:46:55.378 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 81.2865ms.
+2023-11-16 19:46:55.380 +01:00 [INF] Executing ViewResult, running view List.
+2023-11-16 19:46:55.390 +01:00 [INF] Executed ViewResult - view List executed in 10.4948ms.
+2023-11-16 19:46:55.392 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) in 127.7819ms
+2023-11-16 19:46:55.393 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-11-16 19:46:55.397 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ArticleSource/List - - - 200 - text/html;+charset=utf-8 142.1591ms
+2023-11-16 19:46:55.400 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:46:55.400 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:46:55.413 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 12.6947ms
+2023-11-16 19:46:55.417 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.0256ms
+2023-11-16 19:46:55.419 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:46:55.424 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:46:55.427 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 8.1320ms
+2023-11-16 19:52:34.522 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-16 19:52:34.888 +01:00 [INF] Now listening on: https://localhost:7227
+2023-11-16 19:52:34.890 +01:00 [INF] Now listening on: http://localhost:5212
+2023-11-16 19:52:34.893 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-16 19:52:34.894 +01:00 [INF] Hosting environment: Development
+2023-11-16 19:52:34.895 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-11-16 19:52:36.434 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - -
+2023-11-16 19:52:36.586 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:52:36.622 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-11-16 19:52:36.739 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:52:36.758 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-11-16 19:52:36.767 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4.4554ms.
+2023-11-16 19:52:36.783 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:52:36.960 +01:00 [INF] Executed ViewResult - view Index executed in 182.2068ms.
+2023-11-16 19:52:36.966 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 334.5359ms
+2023-11-16 19:52:36.968 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-11-16 19:52:37.006 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - - - 200 - text/html;+charset=utf-8 576.4401ms
+2023-11-16 19:52:37.035 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:52:37.035 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:52:37.075 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 39.7828ms
+2023-11-16 19:52:37.084 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.4305ms
+2023-11-16 19:52:37.101 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:52:37.120 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:52:37.123 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 21.9446ms
+2023-11-16 19:52:40.833 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - -
+2023-11-16 19:52:40.839 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:52:40.844 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-11-16 19:52:41.805 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-11-16 19:52:41.823 +01:00 [INF] Selecting all articles started
+2023-11-16 19:52:42.625 +01:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE NOT ([a].[Title] LIKE N'')
+2023-11-16 19:52:42.742 +01:00 [INF] Selecting all articles finished
+2023-11-16 19:52:42.745 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 938.1118ms.
+2023-11-16 19:52:42.751 +01:00 [INF] Executing ViewResult, running view Index.
+2023-11-16 19:52:42.850 +01:00 [INF] Executed ViewResult - view Index executed in 100.3825ms.
+2023-11-16 19:52:42.853 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 2006.5555ms
+2023-11-16 19:52:42.856 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-11-16 19:52:42.879 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - - - 200 - text/html;+charset=utf-8 2046.5145ms
+2023-11-16 19:52:42.885 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - -
+2023-11-16 19:52:42.887 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 2.2004ms
+2023-11-16 19:52:42.898 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - -
+2023-11-16 19:52:42.920 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.4744ms
+2023-11-16 19:52:42.961 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2023-11-16 19:52:42.967 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-11-16 19:52:42.971 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 327261 text/plain 10.0106ms
