@@ -39,7 +39,7 @@ namespace WebApp.MVC7.Controllers
             return View();
         }
 
-       
+
 
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterModel model)
@@ -69,8 +69,9 @@ namespace WebApp.MVC7.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(UserLoginModel model)
+        public async Task<IActionResult> Login([FromBody]UserLoginModel model)
         {
+            var x = await new StreamReader(Request.Body).ReadToEndAsync();
             var result = await _loginValidator.ValidateAsync(model);
             if (result.IsValid && _userService.IsUserExists(model.Email))
             {
@@ -79,25 +80,16 @@ namespace WebApp.MVC7.Controllers
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                         new ClaimsPrincipal(await _userService.Authenticate(model.Email)));
                 }
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             result.AddToModelState(ModelState);
             return View(model);
         }
-        //domain/controller/action ? search = J & age = 39
-        public IActionResult Search(string? search, int? age)
+        
+        [HttpPost]
+        public IActionResult Test()
         {
-            if (age<18)
-            {
-                return Unauthorized();
-            }
-
-            if (string.IsNullOrWhiteSpace(search))
-            {
-                return Ok(_users);
-            }
-            var searchedUsers = _users.Where(u => u.StartsWith(search));
-            return Ok(searchedUsers);
+            return Ok("Hello there");
         }
 
         [HttpGet]
@@ -108,6 +100,13 @@ namespace WebApp.MVC7.Controllers
                 return Json(false);
             }
             return Json(true);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return Ok();
         }
     }
 }

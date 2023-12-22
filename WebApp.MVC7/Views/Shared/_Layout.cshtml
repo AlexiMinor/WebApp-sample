@@ -24,10 +24,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a asp-area="" asp-controller="Article" asp-action="Index" class="nav-link text-dark" >Articles</a>
+                            <a asp-area="" asp-controller="Article" asp-action="Index" class="nav-link text-dark">Articles</a>
                         </li>
                         <li class="nav-item">
-                            <a asp-area="" asp-controller="Article" asp-action="Favorite" class="nav-link text-dark" >Favorite</a>
+                            <a asp-area="" asp-controller="Article" asp-action="Favorite" class="nav-link text-dark">Favorite</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ArticleSource" asp-action="List">Sources</a>
@@ -35,7 +35,21 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        
+                        @if (!Context.User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark" onclick="showLoginModal()">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Register</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark" onclick="showLogoutModal()" @* data-bs-toggle="modal" data-bs-target="#exampleModal" *@>Logout</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -46,12 +60,65 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - WebApp.MVC7 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    @if (Context.User.Identity.IsAuthenticated)
+    {
+        <div class="modal fade" tabindex="-1" id="logout-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="logout()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="modal fade" tabindex="-1" id="login-modal">
+            <div class="modal-dialog modal-lg">
+                <form method="post" id="login-form">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="email-input" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="email-input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="password-input" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="login()">Save changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

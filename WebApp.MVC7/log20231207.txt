@@ -1,0 +1,100 @@
+2023-12-07 17:32:38.481 +01:00 [INF] User profile is available. Using 'C:\Users\AlexiMinor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-07 17:32:39.115 +01:00 [INF] Now listening on: https://localhost:7227
+2023-12-07 17:32:39.117 +01:00 [INF] Now listening on: http://localhost:5212
+2023-12-07 17:32:39.119 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 17:32:39.121 +01:00 [INF] Hosting environment: Development
+2023-12-07 17:32:39.122 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7
+2023-12-07 17:32:43.876 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ - null null
+2023-12-07 17:32:44.194 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-12-07 17:32:44.222 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller WebApp.MVC7.Controllers.HomeController (WebApp.MVC7).
+2023-12-07 17:32:44.412 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-12-07 17:32:44.416 +01:00 [INF] Hello from HomeController. Serilog works well
+2023-12-07 17:32:44.423 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.4809ms.
+2023-12-07 17:32:44.435 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-07 17:32:44.636 +01:00 [INF] Executed ViewResult - view Index executed in 202.6751ms.
+2023-12-07 17:32:44.640 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - null null
+2023-12-07 17:32:44.640 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/js/site.js?v=FfeNmWTWs6FdLla2_KhOdpdvzEmCBUcNfsT7I3ra2ZI - null null
+2023-12-07 17:32:44.640 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/WebApp.MVC7.styles.css?v=dRgpUhy3x77onpsSslnGBYrKn07NE0WLBWtOy0Vsyak - null null
+2023-12-07 17:32:44.640 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 17:32:44.742 +01:00 [INF] Executed action WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7) in 516.7207ms
+2023-12-07 17:32:44.744 +01:00 [INF] The file /css/site.css was not modified
+2023-12-07 17:32:44.744 +01:00 [INF] The file /js/site.js was not modified
+2023-12-07 17:32:44.747 +01:00 [INF] The file /WebApp.MVC7.styles.css was not modified
+2023-12-07 17:32:44.749 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.HomeController.Index (WebApp.MVC7)'
+2023-12-07 17:32:44.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/css/site.css?v=dzVzHOuPQ0GI3IrQLOxoy2pBkA0VPjpjCYURhWV0spE - 304 null text/css 113.32ms
+2023-12-07 17:32:44.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/js/site.js?v=FfeNmWTWs6FdLla2_KhOdpdvzEmCBUcNfsT7I3ra2ZI - 304 null text/javascript 113.1435ms
+2023-12-07 17:32:44.762 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/WebApp.MVC7.styles.css?v=dRgpUhy3x77onpsSslnGBYrKn07NE0WLBWtOy0Vsyak - 304 null text/css 115.998ms
+2023-12-07 17:32:44.771 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - null null
+2023-12-07 17:32:44.781 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 140.6481ms
+2023-12-07 17:32:44.785 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ - 200 null text/html; charset=utf-8 917.4925ms
+2023-12-07 17:32:44.867 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.9028ms
+2023-12-07 17:32:44.876 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2023-12-07 17:32:44.905 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-12-07 17:32:44.907 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 31.3283ms
+2023-12-07 17:34:20.960 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article/Favorite - null null
+2023-12-07 17:34:21.028 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7)'
+2023-12-07 17:34:21.037 +01:00 [INF] Route matched with {action = "Favorite", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Favorite() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-12-07 17:34:22.516 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7) - Validation state: "Valid"
+2023-12-07 17:34:23.862 +01:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE [a].[Title] NOT LIKE N''
+ORDER BY [a].[Date]
+2023-12-07 17:34:23.905 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1385.2826ms.
+2023-12-07 17:34:23.909 +01:00 [INF] Executing ViewResult, running view Favorite.
+2023-12-07 17:34:23.918 +01:00 [INF] Executed ViewResult - view Favorite executed in 9.2283ms.
+2023-12-07 17:34:23.919 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7) in 2877.679ms
+2023-12-07 17:34:23.921 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Favorite (WebApp.MVC7)'
+2023-12-07 17:34:23.927 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 17:34:23.932 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 5.4049ms
+2023-12-07 17:34:23.934 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article/Favorite - 200 null text/html; charset=utf-8 2974.5448ms
+2023-12-07 17:34:23.939 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - null null
+2023-12-07 17:34:23.954 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2023-12-07 17:34:23.960 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-12-07 17:34:24.014 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 59.9171ms
+2023-12-07 17:34:24.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.6523ms
+2023-12-07 17:34:25.268 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/Article - null null
+2023-12-07 17:34:25.311 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-12-07 17:34:25.315 +01:00 [INF] Route matched with {action = "Index", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller WebApp.MVC7.Controllers.ArticleController (WebApp.MVC7).
+2023-12-07 17:34:25.384 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) - Validation state: "Valid"
+2023-12-07 17:34:25.464 +01:00 [INF] Selecting all articles started
+2023-12-07 17:34:25.493 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[Rate], [a].[Title], [a0].[Name] AS [Source], [a].[Description]
+FROM [Articles] AS [a]
+INNER JOIN [ArticleSources] AS [a0] ON [a].[ArticleSourceId] = [a0].[Id]
+WHERE [a].[Title] NOT LIKE N''
+2023-12-07 17:34:25.549 +01:00 [INF] Selecting all articles finished
+2023-12-07 17:34:25.550 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 163.7332ms.
+2023-12-07 17:34:25.553 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-07 17:34:25.600 +01:00 [INF] Executed ViewResult - view Index executed in 47.489ms.
+2023-12-07 17:34:25.602 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7) in 285.2408ms
+2023-12-07 17:34:25.605 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleController.Index (WebApp.MVC7)'
+2023-12-07 17:34:25.607 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/Article - 200 null text/html; charset=utf-8 339.1592ms
+2023-12-07 17:34:25.674 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2023-12-07 17:34:25.680 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-12-07 17:34:25.682 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 7.3528ms
+2023-12-07 17:34:25.748 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - null null
+2023-12-07 17:34:25.748 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 17:34:25.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 16.6804ms
+2023-12-07 17:34:25.782 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.8745ms
+2023-12-07 17:34:36.093 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/ArticleSource/List - null null
+2023-12-07 17:34:36.133 +01:00 [INF] Executing endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-12-07 17:34:36.138 +01:00 [INF] Route matched with {action = "List", controller = "ArticleSource"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller WebApp.MVC7.Controllers.ArticleSourceController (WebApp.MVC7).
+2023-12-07 17:34:36.182 +01:00 [INF] Executing action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) - Validation state: "Valid"
+2023-12-07 17:34:36.224 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[RssUrl], [a].[Url]
+FROM [ArticleSources] AS [a]
+2023-12-07 17:34:36.283 +01:00 [INF] Executed action method WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7), returned result Microsoft.AspNetCore.Mvc.ViewResult in 99.0417ms.
+2023-12-07 17:34:36.286 +01:00 [INF] Executing ViewResult, running view List.
+2023-12-07 17:34:36.294 +01:00 [INF] Executed ViewResult - view List executed in 8.672ms.
+2023-12-07 17:34:36.296 +01:00 [INF] Executed action WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7) in 156.2506ms
+2023-12-07 17:34:36.298 +01:00 [INF] Executed endpoint 'WebApp.MVC7.Controllers.ArticleSourceController.List (WebApp.MVC7)'
+2023-12-07 17:34:36.300 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/ArticleSource/List - 200 null text/html; charset=utf-8 206.6527ms
+2023-12-07 17:34:36.302 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 17:34:36.302 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7227/_vs/browserLink - null null
+2023-12-07 17:34:36.314 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 12.1073ms
+2023-12-07 17:34:36.339 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - null null
+2023-12-07 17:34:36.352 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7227/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.7066ms
+2023-12-07 17:34:36.361 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\WebApp.MVC7\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-12-07 17:34:36.372 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7227/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - 200 327261 text/plain 34.655ms

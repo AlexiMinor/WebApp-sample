@@ -1,0 +1,415 @@
+2023-12-07 18:45:04.927 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 18:45:04.954 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 18:45:04.955 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 18:45:04.956 +01:00 [INF] Hosting environment: Development
+2023-12-07 18:45:04.956 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 18:45:08.825 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 18:45:09.127 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 308.6698ms
+2023-12-07 18:45:09.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 18:45:09.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 18:45:09.165 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 6.3488ms
+2023-12-07 18:45:09.201 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.291ms
+2023-12-07 18:45:09.267 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 18:45:09.357 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.14ms
+2023-12-07 18:45:51.699 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 18:45:51.738 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 18:45:51.741 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 18:45:51.741 +01:00 [INF] Hosting environment: Development
+2023-12-07 18:45:51.741 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 18:45:55.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 18:45:55.849 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 367.5241ms
+2023-12-07 18:45:55.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 18:45:55.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 18:45:55.887 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 5.8522ms
+2023-12-07 18:45:55.933 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.1304ms
+2023-12-07 18:45:55.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 18:45:56.085 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.4219ms
+2023-12-07 18:46:09.782 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 18:46:09.790 +01:00 [INF] Executing endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:46:09.809 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller NewsAggregator.API.Controllers.ArticlesController (NewsAggregator.API).
+2023-12-07 18:46:11.177 +01:00 [INF] Executing action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) - Validation state: "Valid"
+2023-12-07 18:46:11.880 +01:00 [ERR] An error occurred using the connection to database 'ArticleAggregator' on server 'DESKTOP-JPGDIHT'.
+2023-12-07 18:46:11.953 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApp.Data.ArticlesAggregatorDbContext'.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-12-07 18:46:12.061 +01:00 [INF] Executed action NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) in 2247.4232ms
+2023-12-07 18:46:12.063 +01:00 [INF] Executed endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:46:12.068 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToArrayAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WebApp.Services.ArticleService.GetPositive() in C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\Services\ArticleService.cs:line 80
+   at NewsAggregator.API.Controllers.ArticlesController.GetArticles() in C:\Users\AlexiMinor\OneDrive\Рабочий стол\asp-net\asp-net\WebApp\NewsAggregator.API\Controllers\ArticleControllre.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-12-07 18:46:12.107 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 500 null text/plain; charset=utf-8 2325.0473ms
+2023-12-07 18:50:51.604 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 18:50:51.634 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 18:50:51.637 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 18:50:51.637 +01:00 [INF] Hosting environment: Development
+2023-12-07 18:50:51.637 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 18:50:57.423 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 18:50:57.828 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 410.3035ms
+2023-12-07 18:50:57.868 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 18:50:57.881 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 18:50:57.892 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 23.6764ms
+2023-12-07 18:50:58.153 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 282.7587ms
+2023-12-07 18:50:58.234 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 18:50:58.343 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.0948ms
+2023-12-07 18:51:03.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 18:51:03.650 +01:00 [INF] Executing endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:03.669 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller NewsAggregator.API.Controllers.ArticlesController (NewsAggregator.API).
+2023-12-07 18:51:04.557 +01:00 [INF] Executing action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) - Validation state: "Valid"
+2023-12-07 18:51:04.992 +01:00 [ERR] An error occurred using the connection to database 'ArticleAggregator' on server 'DESKTOP-JPGDIHT'.
+2023-12-07 18:51:05.016 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApp.Data.ArticlesAggregatorDbContext'.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-12-07 18:51:05.109 +01:00 [INF] Executed action NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) in 1436.7649ms
+2023-12-07 18:51:05.110 +01:00 [INF] Executed endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:05.115 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToArrayAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WebApp.Services.ArticleService.GetPositive() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\Services\ArticleService.cs:line 80
+   at NewsAggregator.API.Controllers.ArticlesController.GetArticles() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API\Controllers\ArticleControllre.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-12-07 18:51:05.156 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 500 null text/plain; charset=utf-8 1516.8205ms
+2023-12-07 18:51:34.687 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 18:51:34.689 +01:00 [INF] Executing endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:34.690 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller NewsAggregator.API.Controllers.ArticlesController (NewsAggregator.API).
+2023-12-07 18:51:34.759 +01:00 [INF] Executing action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) - Validation state: "Valid"
+2023-12-07 18:51:34.775 +01:00 [ERR] An error occurred using the connection to database 'ArticleAggregator' on server 'DESKTOP-JPGDIHT'.
+2023-12-07 18:51:34.777 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApp.Data.ArticlesAggregatorDbContext'.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-12-07 18:51:34.859 +01:00 [INF] Executed action NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) in 169.7215ms
+2023-12-07 18:51:34.860 +01:00 [INF] Executed endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:34.860 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToArrayAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WebApp.Services.ArticleService.GetPositive() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\Services\ArticleService.cs:line 80
+   at NewsAggregator.API.Controllers.ArticlesController.GetArticles() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API\Controllers\ArticleControllre.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-12-07 18:51:34.872 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 500 null text/plain; charset=utf-8 184.54ms
+2023-12-07 18:51:45.427 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 18:51:45.458 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 18:51:45.460 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 18:51:45.460 +01:00 [INF] Hosting environment: Development
+2023-12-07 18:51:45.460 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 18:51:46.836 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 18:51:47.112 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 280.8134ms
+2023-12-07 18:51:47.950 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 18:51:47.950 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 18:51:47.955 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 5.1576ms
+2023-12-07 18:51:48.013 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.2229ms
+2023-12-07 18:51:48.085 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 18:51:48.234 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.4308ms
+2023-12-07 18:51:52.607 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 18:51:52.618 +01:00 [INF] Executing endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:52.639 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller NewsAggregator.API.Controllers.ArticlesController (NewsAggregator.API).
+2023-12-07 18:51:53.627 +01:00 [INF] Executing action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) - Validation state: "Valid"
+2023-12-07 18:51:54.115 +01:00 [ERR] An error occurred using the connection to database 'ArticleAggregator' on server 'DESKTOP-JPGDIHT'.
+2023-12-07 18:51:54.140 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebApp.Data.ArticlesAggregatorDbContext'.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-12-07 18:51:54.252 +01:00 [INF] Executed action NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) in 1607.6716ms
+2023-12-07 18:51:54.253 +01:00 [INF] Executed endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:51:54.256 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToArrayAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WebApp.Services.ArticleService.GetPositive() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\Services\ArticleService.cs:line 80
+   at NewsAggregator.API.Controllers.ArticlesController.GetArticles() in C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API\Controllers\ArticleControllre.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-12-07 18:51:54.288 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 500 null text/plain; charset=utf-8 1682.0234ms
+2023-12-07 18:52:59.554 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 18:52:59.586 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 18:52:59.588 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 18:52:59.589 +01:00 [INF] Hosting environment: Development
+2023-12-07 18:52:59.589 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 18:53:01.148 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 18:53:01.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 293.1026ms
+2023-12-07 18:53:02.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 18:53:02.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 18:53:02.137 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 5.6843ms
+2023-12-07 18:53:02.190 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.9031ms
+2023-12-07 18:53:02.262 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 18:53:02.416 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.1607ms
+2023-12-07 18:53:08.506 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 18:53:08.517 +01:00 [INF] Executing endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:53:08.546 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller NewsAggregator.API.Controllers.ArticlesController (NewsAggregator.API).
+2023-12-07 18:53:09.444 +01:00 [INF] Executing action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) - Validation state: "Valid"
+2023-12-07 18:53:10.056 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleSourceId], [a].[Date], [a].[Rate], [a].[Title], [a].[SourceUrl], [a].[Description]
+FROM [Articles] AS [a]
+2023-12-07 18:53:10.104 +01:00 [INF] Executed action method NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 654.8365ms.
+2023-12-07 18:53:10.113 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.Core.ArticleDto[]'.
+2023-12-07 18:53:10.145 +01:00 [INF] Executed action NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API) in 1594.9636ms
+2023-12-07 18:53:10.145 +01:00 [INF] Executed endpoint 'NewsAggregator.API.Controllers.ArticlesController.GetArticles (NewsAggregator.API)'
+2023-12-07 18:53:10.153 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 200 null application/json; charset=utf-8 1647.5151ms
+2023-12-07 19:41:58.640 +01:00 [INF] Now listening on: https://localhost:7031
+2023-12-07 19:41:58.666 +01:00 [INF] Now listening on: http://localhost:5178
+2023-12-07 19:41:58.668 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-07 19:41:58.668 +01:00 [INF] Hosting environment: Development
+2023-12-07 19:41:58.668 +01:00 [INF] Content root path: C:\Users\AlexiMinor\OneDrive\asp-net\asp-net\WebApp\NewsAggregator.API
+2023-12-07 19:42:03.482 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/index.html - null null
+2023-12-07 19:42:03.789 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/index.html - 200 null text/html;charset=utf-8 314.6433ms
+2023-12-07 19:42:03.826 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_vs/browserLink - null null
+2023-12-07 19:42:03.826 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-07 19:42:03.831 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 5.2352ms
+2023-12-07 19:42:03.864 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.8824ms
+2023-12-07 19:42:03.944 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - null null
+2023-12-07 19:42:04.048 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.1243ms
+2023-12-07 19:42:13.871 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 19:42:13.882 +01:00 [INF] Executing endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:42:13.903 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller WebApp.WebApi.Controllers.ArticlesController (WebApp.WebApi).
+2023-12-07 19:42:14.722 +01:00 [INF] Executing action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) - Validation state: "Valid"
+2023-12-07 19:42:15.424 +01:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleSourceId], [a].[Date], [a].[Description], [a].[Rate], [a].[SourceUrl], [a].[Text], [a].[Title]
+FROM [Articles] AS [a]
+2023-12-07 19:42:15.553 +01:00 [INF] Executed action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 827.7123ms.
+2023-12-07 19:42:15.562 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.Models.ArticleModel[]'.
+2023-12-07 19:42:15.608 +01:00 [INF] Executed action WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) in 1701.0569ms
+2023-12-07 19:42:15.608 +01:00 [INF] Executed endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:42:15.616 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 200 null application/json; charset=utf-8 1745.8202ms
+2023-12-07 19:42:42.320 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Article - null null
+2023-12-07 19:42:42.372 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Article - 404 0 null 52.1926ms
+2023-12-07 19:42:42.373 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7031/api/Article, Response status code: 404
+2023-12-07 19:42:48.743 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 19:42:48.779 +01:00 [INF] Executing endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:42:48.779 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller WebApp.WebApi.Controllers.ArticlesController (WebApp.WebApi).
+2023-12-07 19:42:48.864 +01:00 [INF] Executing action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) - Validation state: "Valid"
+2023-12-07 19:42:48.875 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleSourceId], [a].[Date], [a].[Description], [a].[Rate], [a].[SourceUrl], [a].[Text], [a].[Title]
+FROM [Articles] AS [a]
+2023-12-07 19:42:48.901 +01:00 [INF] Executed action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.6165ms.
+2023-12-07 19:42:48.904 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.Models.ArticleModel[]'.
+2023-12-07 19:42:48.931 +01:00 [INF] Executed action WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) in 151.5051ms
+2023-12-07 19:42:48.931 +01:00 [INF] Executed endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:42:48.932 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 200 null application/json; charset=utf-8 188.9721ms
+2023-12-07 19:42:49.125 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/favicon.ico - null null
+2023-12-07 19:42:49.125 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/favicon.ico - 404 0 null 0.6286ms
+2023-12-07 19:42:49.125 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7031/favicon.ico, Response status code: 404
+2023-12-07 19:43:19.684 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/api/Articles - null null
+2023-12-07 19:43:19.722 +01:00 [INF] Executing endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:43:19.722 +01:00 [INF] Route matched with {action = "GetArticles", controller = "Articles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetArticles() on controller WebApp.WebApi.Controllers.ArticlesController (WebApp.WebApi).
+2023-12-07 19:43:19.761 +01:00 [INF] Executing action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) - Validation state: "Valid"
+2023-12-07 19:43:19.763 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleSourceId], [a].[Date], [a].[Description], [a].[Rate], [a].[SourceUrl], [a].[Text], [a].[Title]
+FROM [Articles] AS [a]
+2023-12-07 19:43:19.798 +01:00 [INF] Executed action method WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.0696ms.
+2023-12-07 19:43:19.798 +01:00 [INF] Executing OkObjectResult, writing value of type 'WebApp.Models.ArticleModel[]'.
+2023-12-07 19:43:19.807 +01:00 [INF] Executed action WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi) in 84.2958ms
+2023-12-07 19:43:19.807 +01:00 [INF] Executed endpoint 'WebApp.WebApi.Controllers.ArticlesController.GetArticles (WebApp.WebApi)'
+2023-12-07 19:43:19.807 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/api/Articles - 200 null application/json; charset=utf-8 124.1018ms
+2023-12-07 19:43:20.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7031/favicon.ico - null null
+2023-12-07 19:43:20.041 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7031/favicon.ico - 404 0 null 0.5633ms
+2023-12-07 19:43:20.041 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7031/favicon.ico, Response status code: 404
