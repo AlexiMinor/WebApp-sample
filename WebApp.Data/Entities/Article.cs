@@ -8,7 +8,7 @@ public class Article : IBaseEntity
 
     public string Description { get; set; }
 
-    public string Text { get; set; }
+    public string? Text { get; set; }
     public DateTime Date { get; set; }
     public float? Rate { get; set; }
     public string SourceUrl { get; set; }

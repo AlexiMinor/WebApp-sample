@@ -211,30 +211,30 @@ namespace WebApp.MVC7.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Aggregate(ArticleSourceAggregationModel model)
-        {
-            var data = await _articleService.AggregateDataFromRssByArticleSourceId(model.Id);
+        //[HttpPost]
+        //public async Task<IActionResult> Aggregate(ArticleSourceAggregationModel model)
+        //{
+        //    var data = await _articleService.AggregateDataFromRssByArticleSourceId(model.Id);
 
-            var existedArticles = await _articleService.GetExistedArticlesUrls();
+        //    var existedArticles = await _articleService.GetExistedArticlesUrls();
 
-            var uniqueArticles = data
-                .Where(dto => !existedArticles
-                    .Any(url => dto.SourceUrl.Equals(url))).ToArray();
-            var listFulfilledArticles = new List<ArticleDto>();
+        //    var uniqueArticles = data
+        //        .Where(dto => !existedArticles
+        //            .Any(url => dto.SourceUrl.Equals(url))).ToArray();
+        //    var listFulfilledArticles = new List<ArticleDto>();
 
-            foreach (var articleDto in uniqueArticles)
-            {
-                var fulFilledArticle = await _articleService.GetArticleByUrl(articleDto.SourceUrl, articleDto);
-                if (fulFilledArticle != null)
-                {
-                    listFulfilledArticles.Add(fulFilledArticle);
-                }
-            }
+        //    foreach (var articleDto in uniqueArticles)
+        //    {
+        //        var fulFilledArticle = await _articleService.GetArticleByUrl(articleDto.SourceUrl, articleDto);
+        //        if (fulFilledArticle != null)
+        //        {
+        //            listFulfilledArticles.Add(fulFilledArticle);
+        //        }
+        //    }
 
-            await _articleService.InsertParsedArticles(listFulfilledArticles);
-            return RedirectToAction("Index");
-        }
+        //    await _articleService.ParseArticleText(listFulfilledArticles);
+        //    return RedirectToAction("Index");
+        //}
         //[NonAction]
         private IActionResult Do()
         {

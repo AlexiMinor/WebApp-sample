@@ -19,6 +19,7 @@ public class GetUnratedArticleIdsQueryHandler : IRequestHandler<GetUnratedArticl
         return await _dbContext.Articles
             .AsNoTracking()
             .Where(article => article.Rate == null)
+            .Take(request.MaxTake)
             .Select(article => article.Id)
             .ToArrayAsync(cancellationToken: cancellationToken);
 

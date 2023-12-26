@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hangfire;
+using Microsoft.EntityFrameworkCore;
 using WebApp.Data;
+using WebApp.Data.CQS.Commands;
 using WebApp.Data.Entities;
 using WebApp.Mappers;
 using WebApp.Repositories;
@@ -27,6 +29,17 @@ public static class ServiceCollectionExtension
         services.AddScoped<IUserService, UserService>();
 
         services.AddScoped<ArticleMapper>();
-        //return services;        //return services;
+
+        services.AddHangfire(configuration => configuration
+            .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+            .UseSimpleAssemblyNameTypeSerializer()
+            .UseRecommendedSerializerSettings()
+            .UseSqlServerStorage(connectionString));
+
+        services.AddHangfireServer();
+
+        services.AddMediatR(cfg => {
+            cfg.RegisterServicesFromAssembly(typeof(AddArticleCommand).Assembly);
+        });
     }
 }

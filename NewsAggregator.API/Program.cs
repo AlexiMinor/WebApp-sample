@@ -1,3 +1,4 @@
+using Hangfire;
 using Serilog;
 using Serilog.Events;
 using WebApp.Data.CQS.Commands;
@@ -31,9 +32,7 @@ namespace WebApp.WebApi
 
             builder.Services.RegisterServices(builder.Configuration);
 
-            builder.Services.AddMediatR(cfg => {
-                cfg.RegisterServicesFromAssembly(typeof(AddArticleCommand).Assembly);
-            });
+           
 
             var app = builder.Build();
 
@@ -47,10 +46,10 @@ namespace WebApp.WebApi
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseHangfireDashboard();
 
             app.MapControllers();
-
+            app.MapHangfireDashboard();
             app.Run();
         }
     }

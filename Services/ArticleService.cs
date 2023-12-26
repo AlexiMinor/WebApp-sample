@@ -1,7 +1,6 @@
 ﻿using System.Net.Http.Json;
 using HtmlAgilityPack;
 using System.ServiceModel.Syndication;
-using System.Text.Json.Serialization;
 using System.Xml;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +32,7 @@ namespace WebApp.Services
             _configuration = configuration;
         }
 
-        public async Task<ArticleDto[]?> AggregateDataFromRssByArticleSourceId(Guid sourceId)
+        private async Task<ArticleDto[]?> AggregateDataFromRssByArticleSourceId(Guid sourceId)
         {
             var articleSourceRss = (await _unitOfWork.ArticleSourceRepository.GetById(sourceId))?.RssUrl;
             if (string.IsNullOrWhiteSpace(articleSourceRss)) return null;
@@ -51,6 +50,23 @@ namespace WebApp.Services
                 }).ToArray();
                 return rssArticles;
             }
+        }
+
+        public async Task AggregateArticlesFromRssByArticleSourceId(Guid sourceId)
+        {
+            var data = await AggregateDataFromRssByArticleSourceId(sourceId);
+
+            var existedArticles = await GetExistedArticlesUrls();
+
+            var uniqueArticles = data
+                .Where(dto => !existedArticles
+                    .Any(url => dto.SourceUrl.Equals(url))).ToArray();
+
+            var command = new InsertRssDataCommand()
+            {
+                Articles = uniqueArticles
+            };
+            await _mediator.Send(command);
         }
 
         public async Task<ArticleDto?> GetArticleById(Guid id)
@@ -103,7 +119,7 @@ namespace WebApp.Services
             throw new NotImplementedException();
         }
 
-        public async Task RateUnratedArticles()
+        public async Task RateBatchOfUnratedArticles()
         {
             var ids = await _mediator.Send(new GetUnratedArticleIdsQuery());
             foreach (var id in ids)
@@ -217,15 +233,16 @@ namespace WebApp.Services
             }
         }
 
-        public async Task<ArticleDto?> GetArticleByUrl(string url, ArticleDto dto)
+        private (Guid, string) GetArticleTextByUrl((Guid, string) articleInfo)
         {
             var web = new HtmlWeb();
-            var doc = web.Load(url);
+            var doc = web.Load(articleInfo.Item2);
 
             var textNode = doc.DocumentNode.SelectSingleNode("//div[@class=\"news-text\"]");
             var newsRefs = textNode.SelectSingleNode("//div[@class=\"news-reference\"]");
             textNode.RemoveChild(newsRefs);
             var textValue = textNode.InnerHtml;
+
             //var firstSymbolOutFromArticle = textValue.IndexOf("<div id=\"news-text-end\"></div>");
             //if (firstSymbolOutFromArticle)
             //{
@@ -233,34 +250,37 @@ namespace WebApp.Services
             //}
             //textValue= textValue.Remove(firstSymbolOutFromArticle);
 
-            dto.Text = textValue;
-
-            return dto;
+            var tuple = (articleInfo.Item1,  textValue);
+            return tuple;
         }
 
-        public async Task<string[]> GetExistedArticlesUrls()
+        private async Task<string[]> GetExistedArticlesUrls()
         {
             var existedArticlesUrls = await _unitOfWork.ArticleRepository.GetAsQueryable()
                 .Select(article => article.SourceUrl).ToArrayAsync();
             return existedArticlesUrls;
         }
 
-        public async Task<int> InsertParsedArticles(List<ArticleDto> listFulfilledArticles)
+        public async Task ParseArticleText()
         {
-            var articles = listFulfilledArticles.Select(dto 
-                    => 
-                _articleMapper.ArticleDtoToArticle(dto))
-                .ToArray();
+            var articlesWithoutText = await _mediator
+                .Send(new GetArticlesWithoutTextQuery());
 
-            await _unitOfWork.ArticleRepository.InsertMany(articles);
-            return await _unitOfWork.Commit();
+            var dict = new Dictionary<Guid, string>(); //need to be check is threadsafe 
+            var result = Parallel.ForEach(articlesWithoutText, tuple =>
+            {
+                var data = GetArticleTextByUrl(tuple);
+                dict.Add(data.Item1, data.Item2);
+            }); 
+
+
+            await _mediator.Send(new UpdateArticlesText() { ArticlesData = dict });
         }
 
     }
 
     internal enum IsprasKeys
-    {
-        Key1,
+    { Key1,
         Key2,
         Key3
     }
