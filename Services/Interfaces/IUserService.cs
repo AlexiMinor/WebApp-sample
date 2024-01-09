@@ -9,5 +9,7 @@ public interface IUserService
     bool IsUserExists(string email);
     Task<bool> IsAdmin(string email);
     public Task<ClaimsIdentity> Authenticate(string userName);
-    public  Task<bool> IsPasswordCorrect(string email, string password);
+    public  Task<bool> CheckPassword(string email, string password);
+    Task<UserDto> GetUserByEmail(string userDtoEmail);
+    Task<UserDto> GetUserByRefreshToken(Guid refreshToken);
 }

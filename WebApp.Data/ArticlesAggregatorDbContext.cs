@@ -11,6 +11,7 @@ public class ArticlesAggregatorDbContext : DbContext
     public DbSet<Comment> Comments { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Role { get; set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     public ArticlesAggregatorDbContext(DbContextOptions<ArticlesAggregatorDbContext> options) 
         : base(options)

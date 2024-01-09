@@ -17,7 +17,7 @@ public class TestResourceFilter : Attribute, IResourceFilter
     public void OnResourceExecuting(ResourceExecutingContext context)
     {
         context.HttpContext.Response.Headers.Add("x", x.ToString());
-        context.HttpContext.Response.Headers.Add("Token", Token);
+        context.HttpContext.Response.Headers.Add("AccessToken", Token);
     }
 
     public void OnResourceExecuted(ResourceExecutedContext context)

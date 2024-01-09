@@ -1,8 +1,7 @@
-﻿namespace WebApp.Core;
+﻿namespace WebApp.Models;
 
-public class UserDto
+public class LoginModel
 {
-    public Guid Id { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
 }

@@ -31,6 +31,7 @@ namespace WebApp.WebApi
             builder.Services.AddSwaggerGen();
 
             builder.Services.RegisterServices(builder.Configuration);
+            builder.Services.ConfigureJwt(builder.Configuration);
 
            
 
@@ -45,6 +46,7 @@ namespace WebApp.WebApi
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseHangfireDashboard();
 

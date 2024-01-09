@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApp.Mappers;
 using WebApp.Models;
 using WebApp.Services.Interfaces;
@@ -28,6 +29,7 @@ namespace WebApp.WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetArticles(/*filter*/)
         {
             var articles = (await _articleService.GetPositive())
